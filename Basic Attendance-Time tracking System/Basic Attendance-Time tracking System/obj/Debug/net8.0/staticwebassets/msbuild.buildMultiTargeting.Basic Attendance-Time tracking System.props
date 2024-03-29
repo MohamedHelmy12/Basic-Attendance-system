@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Basic Attendance-Time tracking System.props" />
+</Project>

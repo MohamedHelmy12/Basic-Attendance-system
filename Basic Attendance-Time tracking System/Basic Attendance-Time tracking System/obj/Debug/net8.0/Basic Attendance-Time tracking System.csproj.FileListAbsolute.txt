@@ -1,0 +1,30 @@
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\appsettings.Development.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\appsettings.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.staticwebassets.runtime.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.exe
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.deps.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.runtimeconfig.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.dll
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\bin\Debug\net8.0\Basic Attendance-Time tracking System.pdb
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.AssemblyInfoInputs.cache
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.AssemblyInfo.cs
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.csproj.CoreCompileInputs.cache
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.MvcApplicationPartsAssemblyInfo.cache
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.RazorAssemblyInfo.cache
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.RazorAssemblyInfo.cs
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets.build.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets.development.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets\msbuild.Basic Attendance-Time tracking System.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets\msbuild.build.Basic Attendance-Time tracking System.props
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Basic Attendance-Time tracking System.props
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Basic Attendance-Time tracking System.props
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\staticwebassets.pack.json
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\scopedcss\bundle\Basic Attendance-Time tracking System.styles.css
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\scopedcss\projectbundle\Basic Attendance-Time tracking System.bundle.scp.css
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.dll
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\refint\Basic Attendance-Time tracking System.dll
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.pdb
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\Basic Attendance-Time tracking System.genruntimeconfig.cache
+D:\ITI\.Netcoreشرح\project\Basic Attendance-Time tracking System\Basic Attendance-Time tracking System\obj\Debug\net8.0\ref\Basic Attendance-Time tracking System.dll
