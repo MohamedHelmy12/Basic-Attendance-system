@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\ITI\\dotNet\\Project\\Basic-Attendance-Time-tracking-System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj": {}
+    "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj": {}
   },
   "projects": {
-    "G:\\ITI\\dotNet\\Project\\Basic-Attendance-Time-tracking-System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj": {
+    "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-Time-tracking-System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj",
+        "projectUniqueName": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj",
         "projectName": "Basic Attendance-Time tracking System",
-        "projectPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-Time-tracking-System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-Time-tracking-System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\obj\\",
+        "projectPath": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj",
+        "packagesPath": "C:\\Users\\abdo\\.nuget\\packages\\",
+        "outputPath": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,16 +44,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

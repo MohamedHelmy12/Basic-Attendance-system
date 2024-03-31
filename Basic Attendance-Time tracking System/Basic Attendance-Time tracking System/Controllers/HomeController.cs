@@ -20,7 +20,7 @@ namespace Basic_Attendance_Time_tracking_System.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return  View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
