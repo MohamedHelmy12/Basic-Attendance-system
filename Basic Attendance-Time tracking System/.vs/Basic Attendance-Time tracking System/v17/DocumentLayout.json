@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ITI\\.Netcore\u0634\u0631\u062D\\project\\Basic Attendance-Time tracking System\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{244DAC3C-A66D-4FEE-AAE0-2217A0EEC610}|Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj|d:\\attendance-time-track\\basic attendance-time tracking system\\basic attendance-time tracking system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{244DAC3C-A66D-4FEE-AAE0-2217A0EEC610}|Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System.csproj|solutionrelative:basic attendance-time tracking system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Basic Attendance-Time tracking System\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\attendance-time-track\\Basic Attendance-Time tracking System\\Basic Attendance-Time tracking System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Basic Attendance-Time tracking System\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T21:25:28.129Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
