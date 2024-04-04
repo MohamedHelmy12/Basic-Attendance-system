@@ -22,8 +22,8 @@ namespace MVC_Attendance.Models
         public string Faculty { get; set; }
         public string Specialization { get; set; }
         public int GraduationYear { get; set; }
-        public double AbsenceDegree { get; set; }
-        public int NumberOfAbsences { get; set; }
+        public double AbsenceDegree { get; set; } = 0;
+        public int NumberOfAbsences { get; set; } = 0;
         public virtual ICollection<Permission> Permissions { get; set; } = new List<Permission>();
 
     }
