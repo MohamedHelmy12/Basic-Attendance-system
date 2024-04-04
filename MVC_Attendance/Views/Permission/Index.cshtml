@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MVC_Attendance.Models.Permission>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student)
+            </th>
+			<th>
+				@Html.DisplayNameFor(model => model.date)
+			</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reason)
+			</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model == null)
+		{
+			<tr>
+				<td colspan="6">No data found</td>
+			</tr>
+		}
+		else
+		{
+			@foreach (var item in Model) {
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => item.Student.FirstName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.date)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Type)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Status)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Reason)
+					</td>
+					<td>
+						<a asp-action="Edit" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Edit</a> |
+						<a asp-action="Details" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Details</a> |
+						<a asp-action="Delete" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Delete</a>
+					</td>
+				</tr>
+			}
+		})
+    </tbody>
+</table>
+
+@section Scripts {
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
