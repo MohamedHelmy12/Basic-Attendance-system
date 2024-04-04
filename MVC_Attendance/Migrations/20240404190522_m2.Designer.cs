@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Attendance.Migrations
 {
     [DbContext(typeof(AttDbContext))]
-    [Migration("20240402110429_permissions")]
-    partial class permissions
+    [Migration("20240404190522_m2")]
+    partial class m2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,9 +45,14 @@ namespace MVC_Attendance.Migrations
                     b.Property<int>("ScheduleId")
                         .HasColumnType("int");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ScheduleId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Attendances");
                 });
@@ -112,18 +117,22 @@ namespace MVC_Attendance.Migrations
 
             modelBuilder.Entity("MVC_Attendance.Models.Permission", b =>
                 {
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
+                    b.Property<DateOnly>("date")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Reason")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("StudentId");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("StudentId", "date");
 
                     b.ToTable("Permissions");
                 });
@@ -295,14 +304,9 @@ namespace MVC_Attendance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("StudentId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UniversityID")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("StudentId");
 
                     b.ToTable("Students");
                 });
@@ -315,7 +319,15 @@ namespace MVC_Attendance.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MVC_Attendance.Models.User", "User")
+                        .WithMany("Attendances")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Schedule");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Intake", b =>
@@ -351,7 +363,7 @@ namespace MVC_Attendance.Migrations
             modelBuilder.Entity("MVC_Attendance.Models.Permission", b =>
                 {
                     b.HasOne("MVC_Attendance.Models.Student", "Student")
-                        .WithMany()
+                        .WithMany("Permissions")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -449,10 +461,6 @@ namespace MVC_Attendance.Migrations
                         .HasForeignKey("MVC_Attendance.Models.Student", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("MVC_Attendance.Models.Student", null)
-                        .WithMany("Students")
-                        .HasForeignKey("StudentId");
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.ITIProgram", b =>
@@ -465,9 +473,14 @@ namespace MVC_Attendance.Migrations
                     b.Navigation("Attendances");
                 });
 
+            modelBuilder.Entity("MVC_Attendance.Models.User", b =>
+                {
+                    b.Navigation("Attendances");
+                });
+
             modelBuilder.Entity("MVC_Attendance.Models.Student", b =>
                 {
-                    b.Navigation("Students");
+                    b.Navigation("Permissions");
                 });
 #pragma warning restore 612, 618
         }
