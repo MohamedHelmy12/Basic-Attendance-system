@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Attendance.Migrations
 {
     [DbContext(typeof(AttDbContext))]
-    [Migration("20240402112521_user_attendance")]
-    partial class user_attendance
+    [Migration("20240403164744_setdatabase2")]
+    partial class setdatabase2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
