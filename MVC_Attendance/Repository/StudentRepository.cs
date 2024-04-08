@@ -6,7 +6,7 @@ namespace MVC_Attendance.Repository
 {
     public class StudentRepository : IStudentRepository
     {
-        AttDbContext db;
+        private readonly AttDbContext db;
         public StudentRepository(AttDbContext _db) 
         {
             db = _db;

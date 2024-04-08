@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MVC_Attendance.IRepository;
+using MVC_Attendance.Repository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance
@@ -11,10 +13,11 @@ namespace MVC_Attendance
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            //builder.Services.AddDbContext<AttDbContext>(options =>
-            //{
-            //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            //});
+            builder.Services.AddDbContext<AttDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+            builder.Services.AddScoped < IPermissionRepository, PermissionRepository >();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

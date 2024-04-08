@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Permission>
+
+@{
+    ViewData["Title"] = "StudentsPermissions";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div>
+    @foreach(var p in Model)
+    {
+        <div class="card w-100 mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@p.Student.FirstName @p.Student.LastName</h5>
+                <p class="card-text">@p.date </p>
+                <p class="card-text">@p.Type </p>
+                <a href="#" class="btn btn-success align-self-end">Accept</a>
+                <a href="#" class="btn btn-danger align-self-end">Reject</a>
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,13 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Controllers
 {
     public class StudentController : Controller
     {
-        AttDbContext db =new AttDbContext();
+        private readonly AttDbContext db;
+        private readonly IStudentRepository studentRepository;
+        public StudentController(AttDbContext _db, IStudentRepository _studentRepository)
+        {
+            db = _db;
+            studentRepository = _studentRepository;
+        }
         public IActionResult Index()
         {
             return View();
