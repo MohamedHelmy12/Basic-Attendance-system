@@ -12,7 +12,8 @@ namespace MVC_Attendance.Repository
         }
         public Supervise GetSupervisionInfo(int insId)
         {
-            return db.Supervises.Where(s => s.InstructorId == insId).OrderByDescending(s => s.IntakeId).FirstOrDefault();
+            var superVisionInfo = db.Supervises.Where(s => s.InstructorId == insId).OrderByDescending(s => s.IntakeId).FirstOrDefault();
+            return superVisionInfo;
         }
     }
 }

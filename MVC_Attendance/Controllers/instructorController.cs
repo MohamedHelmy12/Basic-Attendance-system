@@ -16,9 +16,10 @@ namespace MVC_Attendance.Controllers
             return View();
         }
 
-        public IActionResult StudetsPermissions(int insId)
+        public IActionResult StudetsPermissions(int insId = 3)
         {
-            List<Permission> permissions = permissionRepository.GetPendingPermissions();
+            List<Permission> permissions = permissionRepository.GetSupervisorStudentsPermissions(insId);
+            
             return View(permissions);
         }
         

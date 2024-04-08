@@ -8,7 +8,7 @@ namespace MVC_Attendance.IRepository
         void DeletePermission(int stdId, DateOnly date);
         Permission GetPermission(int stdId, DateOnly date);
         List<Permission> GetPendingPermissions();
-        //List<Permission> GetSupervisorStudentsPermissions(int supervisorId);
-        //Supervise GetSupervisorIntakeTrack(int supervisorId);
+        List<Permission> GetSupervisorStudentsPermissions(int supervisorId);
+        
     }
 }

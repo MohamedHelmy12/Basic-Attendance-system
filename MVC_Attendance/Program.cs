@@ -18,6 +18,8 @@ namespace MVC_Attendance
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
             builder.Services.AddScoped < IPermissionRepository, PermissionRepository >();
+            builder.Services.AddScoped < IStudentRepository, StudentRepository >();
+            builder.Services.AddScoped < IInstructorRepository, InstructorRepository >();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
