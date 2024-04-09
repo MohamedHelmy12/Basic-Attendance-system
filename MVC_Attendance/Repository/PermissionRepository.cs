@@ -62,5 +62,29 @@ namespace MVC_Attendance.Repository
             }
             return supervPermissions;
         }
+        public void updatePermissionStatus(Permission per, string status)
+        {
+            var permission = db.Permissions.FirstOrDefault(p => p.StudentId == per.StudentId && p.date == per.date);
+            if (permission != null)
+            {
+                permission.Status = status;
+            }
+            db.SaveChanges();
+        }
+
+        //public void AcceptPermission(Permission permission)
+        //{
+        //    updatePermissionStatus(permission, "Accepted");
+        //}
+
+        //public void RejectPermission(Permission permission)
+        //{
+        //    updatePermissionStatus(permission, "Rejected");
+        //}
+
+        public void UpdatePermission(Permission permission, string status)
+        {
+            updatePermissionStatus(permission, status);
+        }
     }
 }

@@ -6,19 +6,42 @@
 }
 
 <div>
-    
-
-    @foreach(var p in Model)
+    @foreach (var p in Model)
     {
         <div class="card w-100 mb-3">
             <div class="card-body">
                 <h5 class="card-title">@p.Student.FirstName @p.Student.LastName</h5>
                 <p class="card-text">@p.date </p>
                 <p class="card-text">@p.Type </p>
-                <a href="#" class="btn btn-success align-self-end">Accept</a>
-                <a href="#" class="btn btn-danger align-self-end">Reject</a>
+                <button class="btn btn-success" onclick="updatePermission(@p.StudentId, '@p.date', 'Approved')">Approve</button>
+                <button class="btn btn-danger" onclick="updatePermission(@p.StudentId, '@p.date', 'Rejected')">Reject</button>
             </div>
         </div>
     }
 </div>
 
+<script>
+
+    function updatePermission(studentId, date, status) {
+        var requestData = {
+            studentId: studentId,
+            date: date,
+            status: status
+        };
+        $.ajax({
+            url: '/instructor/UpdatePermission', // URL of the controller action method
+            method: 'POST',
+            contentType: 'application/json', // Set the content type to JSON
+            data: JSON.stringify(requestData), // Convert the permission object to a JSON string
+            success: function (response) {
+                // Handle the success response here
+                console.log('Permission received successfully:', response);
+            },
+            error: function (xhr, status, error) {
+                // Handle errors here
+                console.error('Failed to receive permission:', error);
+            }
+        });
+    }
+
+</script>

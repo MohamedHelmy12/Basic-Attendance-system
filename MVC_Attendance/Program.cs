@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MVC_Attendance.IRepository;
 using MVC_Attendance.Repository;
 using MVC_Attendance.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MVC_Attendance
 {
@@ -20,6 +21,14 @@ namespace MVC_Attendance
             builder.Services.AddScoped < IPermissionRepository, PermissionRepository >();
             builder.Services.AddScoped < IStudentRepository, StudentRepository >();
             builder.Services.AddScoped < IInstructorRepository, InstructorRepository >();
+            builder.Services.AddScoped < IAccountRepository, AccountRepository >();
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,7 +39,7 @@ namespace MVC_Attendance
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

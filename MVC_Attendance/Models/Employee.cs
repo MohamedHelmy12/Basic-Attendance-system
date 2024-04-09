@@ -19,7 +19,7 @@
     {
         // Properties
         //public int EmployeeID { get; }
-        public EmployeeType EmployeeType { get; set; }
+        public EmployeeType? EmployeeType { get; set; }
         public double Salary { get; set; }
         public DateTime HireDate { get; set; }
 

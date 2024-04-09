@@ -6,14 +6,17 @@ namespace MVC_Attendance.Repository
     public class InstructorRepository : IInstructorRepository
     {
         private readonly AttDbContext db;
+        
         public InstructorRepository(AttDbContext _db)
         {
             db = _db;
         }
+
         public Supervise GetSupervisionInfo(int insId)
         {
             var superVisionInfo = db.Supervises.Where(s => s.InstructorId == insId).OrderByDescending(s => s.IntakeId).FirstOrDefault();
             return superVisionInfo;
         }
+
     }
 }
