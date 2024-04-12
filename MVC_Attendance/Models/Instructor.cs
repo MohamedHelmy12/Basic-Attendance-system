@@ -10,7 +10,7 @@
     public class Instructor : User
     {
         // Properties
-        //public int InstructorID { get; }
+        public int InstructorID { get; }
 
         // Properties(Optional)
 

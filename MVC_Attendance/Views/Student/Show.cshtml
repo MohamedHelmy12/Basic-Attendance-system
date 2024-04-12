@@ -10,7 +10,13 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+
+<div>
+    <input type="text" id="searchInput" placeholder="Search by email...">
+    <button id="searchButton">Search</button>
+</div>
+
+<table id="studentTable" class="table">
     <thead>
         <tr>
             <th>
@@ -25,7 +31,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.GraduationYear)
             </th>
-            
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
             </th>
@@ -50,48 +55,77 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UniversityID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Faculty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Specialization)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GraduationYear)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.role)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are u sure ')">Delete</a>
-            </td>
-        </tr>
-}
+    <tbody id="studentTableBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UniversityID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specialization)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GraduationYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.role)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div class="text-center" id="paginationContainer">
+    <!-- Pagination buttons will be inserted here -->
+</div>
+
+    <script>
+        $(document).ready(function () {
+            $("#searchButton").click(function () {
+                var searchText = $("#searchInput").val().toLowerCase();
+                $("#studentTableBody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+                });
+            });
+
+            // Pagination
+            var table = $('#studentTable').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": false,
+                "autoWidth": false
+            });
+
+            $('#paginationContainer').append($('#studentTable_paginate'));
+        });
+    </script>
+
