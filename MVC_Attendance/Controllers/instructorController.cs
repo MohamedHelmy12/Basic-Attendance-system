@@ -15,13 +15,15 @@ namespace MVC_Attendance.Controllers
         private IAccountRepository accountRepository;
         private IScheduleRepository scheduleRepository;
         private IAttendanceRepository attendanceRepository;
-        public instructorController(IPermissionRepository _permissionRepository, IInstructorRepository _instructorRepository, IAccountRepository _accountRepository, IScheduleRepository _scheduleRepository, IAttendanceRepository _attendanceRepository)
+        private IStudentRepository studentRepository;
+        public instructorController(IPermissionRepository _permissionRepository, IInstructorRepository _instructorRepository, IAccountRepository _accountRepository, IScheduleRepository _scheduleRepository, IAttendanceRepository _attendanceRepository, IStudentRepository _studentRepository)
         {
             permissionRepository = _permissionRepository;
             instructorRepository = _instructorRepository;
             accountRepository = _accountRepository;
             scheduleRepository = _scheduleRepository;
             attendanceRepository = _attendanceRepository;
+            studentRepository = _studentRepository;
         }
         public IActionResult Index()
         {
@@ -57,9 +59,19 @@ namespace MVC_Attendance.Controllers
         public ActionResult Schedule(Schedule schedule)
         {
             var insId = accountRepository.GetUserByEmail(User.FindFirst(ClaimTypes.Email).Value).Id;
-            var insTrackId = instructorRepository.GetSupervisionInfo(insId).TrackId;
-            schedule.TrackId = insTrackId;
-            scheduleRepository.AddSchedule(schedule);
+            var insTrackIntake = instructorRepository.GetSupervisionInfo(insId);
+            schedule.TrackId = insTrackIntake.TrackId;
+            try
+            {
+                scheduleRepository.AddSchedule(schedule);
+                var trackStudentsIds = studentRepository.GetStudentsIdsInTrack(insTrackIntake.TrackId, insTrackIntake.IntakeId);
+                attendanceRepository.AddScheduleForTrackStudents(schedule, trackStudentsIds);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             return RedirectToAction("Schedule");
         }
     }
