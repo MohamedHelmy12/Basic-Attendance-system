@@ -1,0 +1,62 @@
+﻿@model Schedule
+
+@{
+    ViewData["Title"] = "Schedule List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var schedules = ViewBag.schedules as List<Schedule>;
+}
+
+<h2>Schedule List</h2>
+
+<!-- Display existing schedules -->
+@if (schedules != null)
+{
+    <div>
+        <h3>Existing Schedules</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Start Period</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var schedule in schedules)
+                {
+                    <tr>
+                        <td>@schedule.StartPeriod</td>
+                        <td>@schedule.Date</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<!-- Add a new schedule -->
+<div>
+    <h3>Add New Schedule</h3>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="StartPeriod" class="control-label"></label>
+            <input type="time" asp-for="StartPeriod" class="form-control" />
+            <span asp-validation-for="StartPeriod" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Date" class="control-label"></label>
+            <input type="date" asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="TrackId" class="control-label"></label>
+            <input asp-for="TrackId" class="form-control" />
+            <span asp-validation-for="TrackId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

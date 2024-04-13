@@ -22,6 +22,9 @@ namespace MVC_Attendance
             builder.Services.AddScoped < IStudentRepository, StudentRepository >();
             builder.Services.AddScoped < IInstructorRepository, InstructorRepository >();
             builder.Services.AddScoped < IAccountRepository, AccountRepository >();
+            builder.Services.AddScoped < ITrackRepository, TrackRepository >();
+            builder.Services.AddScoped < IScheduleRepository, ScheduleRepository >();
+            builder.Services.AddScoped < IAttendanceRepository, AttendanceRepository >();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
             {

@@ -11,12 +11,10 @@ namespace MVC_Attendance.Repository
         {
             db = _db;
         }
-
         public Supervise GetSupervisionInfo(int insId)
         {
-            var superVisionInfo = db.Supervises.Where(s => s.InstructorId == insId).OrderByDescending(s => s.IntakeId).FirstOrDefault();
-            return superVisionInfo;
+            var supervisionInfo = db.Supervises.Where(s => s.InstructorId == insId).OrderByDescending(s => s.IntakeId).FirstOrDefault();
+            return supervisionInfo;
         }
-
     }
 }

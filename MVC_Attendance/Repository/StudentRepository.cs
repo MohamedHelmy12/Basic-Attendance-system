@@ -14,7 +14,11 @@ namespace MVC_Attendance.Repository
         public StdIntakeTrack GetStdIntakeTrack(int  studentId)
         {
            return db.StdIntakeTrack.Include(sit => sit.Track).Include(sit => sit.Intake).FirstOrDefault(sit => sit.StudentId == studentId);
+        }
 
+        public List<int> GetStudentsIdsInTrack(int trackId, int intakeId)
+        {
+            return db.StdIntakeTrack.Where(sit => sit.TrackId == trackId && sit.IntakeId == intakeId).Select(sit => sit.StudentId).ToList();
         }
     }
 }

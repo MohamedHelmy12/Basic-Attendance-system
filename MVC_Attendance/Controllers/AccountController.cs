@@ -31,7 +31,7 @@ namespace MVC_Attendance.Controllers
                     {
                         var claimPrincipal = accountRepository.AddUserAuthentication(user);
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal);
-                        await Console.Out.WriteLineAsync(User.FindFirst(ClaimTypes.Role)?.Value);
+                        //await Console.Out.WriteLineAsync(User.FindFirst(ClaimTypes.Role)?.Value);
                         return RedirectToAction("Index", "Home");
                     }
                     else
