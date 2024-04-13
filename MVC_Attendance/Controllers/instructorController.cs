@@ -56,10 +56,9 @@ namespace MVC_Attendance.Controllers
         [HttpPost]
         public ActionResult Schedule(Schedule schedule)
         {
-            //var insId = accountRepository.GetUserByEmail(User.FindFirst(ClaimTypes.Email).Value).Id;
-            //var insTrackIntake = instructorRepository.GetSupervisionInfo(insId);
-            //List<Schedule> schedules = scheduleRepository.GetTrackSchedule(insTrackIntake.TrackId, insTrackIntake.IntakeId);
-            //ViewBag.schedules = schedules;
+            var insId = accountRepository.GetUserByEmail(User.FindFirst(ClaimTypes.Email).Value).Id;
+            var insTrackId = instructorRepository.GetSupervisionInfo(insId).TrackId;
+            schedule.TrackId = insTrackId;
             scheduleRepository.AddSchedule(schedule);
             return RedirectToAction("Schedule");
         }
