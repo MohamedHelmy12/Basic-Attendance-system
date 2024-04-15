@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MVC_Attendance.Migrations
 {
     /// <inheritdoc />
-    public partial class setdatabase : Migration
+    public partial class addmigrationm5 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -120,7 +120,7 @@ namespace MVC_Attendance.Migrations
                 name: "Instructors",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)    
                 },
                 constraints: table =>
                 {
@@ -247,8 +247,9 @@ namespace MVC_Attendance.Migrations
                 {
                     StudentId = table.Column<int>(type: "int", nullable: false),
                     date = table.Column<DateOnly>(type: "date", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Type = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    Reason = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

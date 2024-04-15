@@ -7,7 +7,11 @@ namespace MVC_Attendance.Controllers
 {
     public class StudentController : Controller
     {
-        AttDbContext db =new AttDbContext();
+        AttDbContext db;
+        public StudentController(AttDbContext db)
+        {
+            this.db = db;
+        }
         public IActionResult Index()
         {
             return View();

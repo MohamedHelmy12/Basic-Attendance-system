@@ -7,7 +7,7 @@ namespace MVC_Attendance.Models
 {
     public class AttDbContext : DbContext
     {
-        //public AttDbContext(DbContextOptions<AttDbContext> options) : base(options) { }
+        public AttDbContext(DbContextOptions<AttDbContext> options) : base(options) { }
         //public AttDbContext()
         //{ }
 
@@ -44,7 +44,7 @@ namespace MVC_Attendance.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=LAPTOP-4UUJ0C6J\\MSSQLSERVER02;Database=Attendance;integrated security = true; trust server certificate = true");
+            optionsBuilder.UseSqlServer("Server=.;Database=Attendance;integrated security = true; trust server certificate = true");
 
         }
     }
