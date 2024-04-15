@@ -7,7 +7,13 @@ namespace MVC_Attendance.Controllers
 {
     public class StudentController : Controller
     {
-        AttDbContext db =new AttDbContext();
+        private readonly AttDbContext db;
+        public StudentController(AttDbContext context)
+        {
+            db = context;
+
+		}
+        // AttDbContext db =new AttDbContext(new DbContextOptions<AttDbContext>());
         public IActionResult Index()
         {
             return View();
@@ -15,7 +21,7 @@ namespace MVC_Attendance.Controllers
 
         public IActionResult Show()
         {
-            var students=db.Students.ToList();
+            var students= db.Students.ToList();
             return View(students);
         }
         [HttpGet]
