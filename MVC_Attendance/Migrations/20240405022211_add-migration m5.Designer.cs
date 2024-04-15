@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Attendance.Migrations
 {
     [DbContext(typeof(AttDbContext))]
-    [Migration("20240403164648_setdatabase")]
-    partial class setdatabase
+    [Migration("20240405022211_add-migration m5")]
+    partial class addmigrationm5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -123,13 +123,14 @@ namespace MVC_Attendance.Migrations
                     b.Property<DateOnly>("date")
                         .HasColumnType("date");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<string>("Reason")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("StudentId", "date");
 
