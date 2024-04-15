@@ -7,14 +7,9 @@ namespace MVC_Attendance.Models
 {
     public class AttDbContext : DbContext
     {
-		// System.ArgumentException: ''AddDbContext' was called with configuration, but the context type 'AttDbContext' only declares a parameterless constructor. This means that the configuration passed to 'AddDbContext' will never be used. If configuration is passed to 'AddDbContext', then 'AttDbContext' should declare a constructor that accepts a DbContextOptions<AttDbContext> and must pass it to the base constructor for DbContext.'
         public AttDbContext(DbContextOptions<AttDbContext> options) : base(options) { }
-		//public AttDbContext(DbContextOptions<AttDbContext> options) : base(options) { }
-		//public AttDbContext()
-		//{ }
-
-
-
+        public AttDbContext()
+        { }
 
 		public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Student> Students { get; set; }
@@ -44,11 +39,9 @@ namespace MVC_Attendance.Models
             base.OnModelCreating(modelBuilder);
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer("Server=.;Database=AttendSysMVC;integrated security = true; trust server certificate = true");
-
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+        }
     }
 
 }       

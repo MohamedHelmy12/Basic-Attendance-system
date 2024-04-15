@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Controllers
@@ -8,12 +9,12 @@ namespace MVC_Attendance.Controllers
     public class StudentController : Controller
     {
         private readonly AttDbContext db;
-        public StudentController(AttDbContext context)
+        private readonly IStudentRepository studentRepository;
+        public StudentController(AttDbContext _db, IStudentRepository _studentRepository)
         {
-            db = context;
-
-		}
-        // AttDbContext db =new AttDbContext(new DbContextOptions<AttDbContext>());
+            db = _db;
+            studentRepository = _studentRepository;
+        }
         public IActionResult Index()
         {
             return View();
