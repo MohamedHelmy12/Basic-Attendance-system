@@ -2,7 +2,7 @@
 
 namespace MVC_Attendance.Repository
 {
-    public class EmployeeRepository
+    public class EmployeeRepository:IEmployeeRepository
     {
         AttDbContext db;
         public EmployeeRepository(AttDbContext db)
@@ -19,6 +19,7 @@ namespace MVC_Attendance.Repository
         }
         public void Add(Employee emp)
         {
+          emp.role=Role.Employee;
             db.Employees.Add(emp);
             db.SaveChanges();
         }

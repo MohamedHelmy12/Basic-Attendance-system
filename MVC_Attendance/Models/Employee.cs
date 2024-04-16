@@ -24,7 +24,7 @@
         public DateTime HireDate { get; set; }
 
         // Properties(Optional)
-
+        
         // Foreign Key
 
 

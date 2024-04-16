@@ -20,8 +20,10 @@ namespace MVC_Attendance
             builder.Services.AddScoped<ITrackRepository, TrackRepository>();
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             builder.Services.AddScoped<ISuperviseRepository, SuperviseRepository>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 
+                
 
             var app = builder.Build();
 
