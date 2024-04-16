@@ -17,7 +17,9 @@ namespace MVC_Attendance.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            // send the Model to the View
+
+            return View(db.Students.ToList());
         }
 
         public IActionResult Show()

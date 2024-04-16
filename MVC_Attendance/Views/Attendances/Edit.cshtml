@@ -1,7 +1,7 @@
 ﻿@model MVC_Attendance.Models.Attendance
 
 @{
-    Layout = null;
+    // Layout = null;
 }
 
 <!DOCTYPE html>
@@ -22,17 +22,17 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
+                <input type="date" asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="AttendanceTime" class="control-label"></label>
-                <input asp-for="AttendanceTime" class="form-control" />
+                <input type="time" asp-for="AttendanceTime" class="form-control" />
                 <span asp-validation-for="AttendanceTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LeavingTime" class="control-label"></label>
-                <input asp-for="LeavingTime" class="form-control" />
+                <input type="time" asp-for="LeavingTime" class="form-control" />
                 <span asp-validation-for="LeavingTime" class="text-danger"></span>
             </div>
             <div class="form-group">

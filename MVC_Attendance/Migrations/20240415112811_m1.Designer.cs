@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Attendance.Migrations
 {
     [DbContext(typeof(AttDbContext))]
-    [Migration("20240409131211_m1")]
+    [Migration("20240415112811_m1")]
     partial class m1
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace MVC_Attendance.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.3")
+                .HasAnnotation("ProductVersion", "8.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -104,6 +104,9 @@ namespace MVC_Attendance.Migrations
                     b.Property<int>("TrackId")
                         .HasColumnType("int");
 
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -145,7 +148,10 @@ namespace MVC_Attendance.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<TimeOnly>("StartDate")
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<TimeOnly>("StartPeriod")
                         .HasColumnType("time");
 
                     b.Property<int>("TrackId")
@@ -250,7 +256,7 @@ namespace MVC_Attendance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("role")
+                    b.Property<int>("Role")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -264,7 +270,7 @@ namespace MVC_Attendance.Migrations
                 {
                     b.HasBaseType("MVC_Attendance.Models.User");
 
-                    b.Property<int>("EmployeeType")
+                    b.Property<int?>("EmployeeType")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("HireDate")
@@ -294,7 +300,7 @@ namespace MVC_Attendance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GraduationYear")
+                    b.Property<int?>("GraduationYear")
                         .HasColumnType("int");
 
                     b.Property<int>("NumberOfAbsences")

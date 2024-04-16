@@ -10,6 +10,79 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 20px;
+        }
+
+        h4 {
+            color: #1e69de;
+            font-size: 24px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            background: #ccc;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        dl {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+        }
+
+        dt {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        dd {
+            margin: 0;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+            a:hover {
+                background-color: #e5f4fd;
+                border-color: #0077cc;
+            }
+
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .col-sm-2, .col-sm-10 {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .col-sm-2 {
+            grid-column: 1;
+        }
+
+        .col-sm-10 {
+            grid-column: 2;
+        }
+    </style>
 </head>
 <body>
 
@@ -40,12 +113,18 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Schedule.Id)
+            <text> : </text>
+            @Html.DisplayFor(model => model.Schedule.Date)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User)
+            @Html.DisplayNameFor(model => model.User) 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.User.Id)
+            <text> : </text> 
+            @Html.DisplayFor(model => model.User.FirstName) 
+            <text> </text>
+            @Html.DisplayFor(model => model.User.LastName)
         </dd>
     </dl>
 </div>

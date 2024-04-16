@@ -49,7 +49,7 @@ namespace MVC_Attendance.Migrations
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    role = table.Column<int>(type: "int", nullable: false)
+                    Role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,7 +82,8 @@ namespace MVC_Attendance.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StartDate = table.Column<TimeOnly>(type: "time", nullable: false),
+                    StartPeriod = table.Column<TimeOnly>(type: "time", nullable: false),
+                    Date = table.Column<DateOnly>(type: "date", nullable: false),
                     TrackId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -101,7 +102,7 @@ namespace MVC_Attendance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    EmployeeType = table.Column<int>(type: "int", nullable: false),
+                    EmployeeType = table.Column<int>(type: "int", nullable: true),
                     Salary = table.Column<double>(type: "float", nullable: false),
                     HireDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -141,7 +142,7 @@ namespace MVC_Attendance.Migrations
                     UniversityID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Faculty = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Specialization = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GraduationYear = table.Column<int>(type: "int", nullable: false),
+                    GraduationYear = table.Column<int>(type: "int", nullable: true),
                     AbsenceDegree = table.Column<double>(type: "float", nullable: false),
                     NumberOfAbsences = table.Column<int>(type: "int", nullable: false)
                 },
@@ -162,7 +163,8 @@ namespace MVC_Attendance.Migrations
                 {
                     IntakeId = table.Column<int>(type: "int", nullable: false),
                     TrackId = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StartDate = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {

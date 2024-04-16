@@ -10,6 +10,59 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* subtle shadow */
+            border-radius: 8px; /* rounded corners */
+            overflow: hidden; /* ensures the rounded corners include child elements */
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(145deg, #6db3f2, #1e69de); /* gradient background */
+            color: #fff; /* white text for headers */
+            font-size: 16px; /* larger text for headers */
+            font-weight: bold; /* bold text for headers */
+        }
+
+        tbody tr:hover {
+            background-color: #f9f9f9; /* hover effect for rows */
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+            padding: 5px 10px; /* padding makes links feel more like buttons */
+            border-radius: 4px; /* rounded corners for links */
+            transition: background-color 0.3s; /* smooth transition for hover effect */
+        }
+
+            a:hover {
+                text-decoration: none;
+                background-color: #e5f4fd; /* subtle background on hover */
+            }
+
+        .no-data {
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
 <p>
@@ -28,16 +81,16 @@
                 @Html.DisplayNameFor(model => model.LeavingTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Schedule)
+                @Html.DisplayNameFor(model => model.Schedule.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.User)
+                @Html.DisplayNameFor(model => model.User.FirstName)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @if (Model.Count() == 0)
+        @if (!Model.Any()) // Using Any() is more efficient for checking existence
 		{
 			<tr>
 				<td colspan="6">No data found</td>
@@ -50,28 +103,34 @@
 			</tr>
 		}
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttendanceTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LeavingTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttendanceTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeavingTime)
+        </td>
+        <td>
+            @item.Schedule?.Date
+        </td>
+        <td>
+            @item.User?.FirstName <text> </text> @item.User?.LastName
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.Id">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </a> |
+            <a asp-action="Details" asp-route-id="@item.Id">
+                <i class="fa fa-info" aria-hidden="true"></i>
+            </a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+        </td>
+    </tr>
 }
     </tbody>
 </table>

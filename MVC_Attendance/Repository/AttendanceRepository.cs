@@ -1,4 +1,5 @@
-﻿using MVC_Attendance.IRepository;
+﻿using Microsoft.AspNetCore.Mvc;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Repository
@@ -10,6 +11,12 @@ namespace MVC_Attendance.Repository
         {
             db = _db;
         }
+        // Get all attendances
+        public IEnumerable<Attendance> GetAllAttendances()
+        {
+			return db.Attendances;
+		}
+        
         public void AddAttendance(Schedule schedule, int userId)
         {
             db.Attendances.Add(new Attendance()
@@ -28,5 +35,5 @@ namespace MVC_Attendance.Repository
                 AddAttendance(schedule, studentId);
             }
         }
-    }
+	}
 }

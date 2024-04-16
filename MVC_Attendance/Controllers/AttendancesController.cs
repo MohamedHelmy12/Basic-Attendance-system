@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Controllers
@@ -45,31 +46,35 @@ namespace MVC_Attendance.Controllers
             return View(attendance);
         }
 
-        // GET: Attendances/Create
+        // Create Attendance
         public IActionResult Create()
         {
             ViewData["ScheduleId"] = new SelectList(_context.Schedules, "Id", "Id");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            //         ViewData["UserId"] = new SelectList(_context.Users, "Id", "FirstName" + "LastName");
+            //return View();
+            // Use LINQ to project the users to a new anonymous type with Id and FullName
+            ViewData["UserId"] = new SelectList(_context.Users.Select(u => new {
+                Id = u.Id,
+                FullName = u.Id + ":" + u.FirstName + " " + u.LastName // Concatenate FirstName and LastName with a space
+            }), "Id", "FullName");
             return View();
         }
 
         // POST: Attendances/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Date,AttendanceTime,LeavingTime,ScheduleId,UserId")] Attendance attendance)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(attendance);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+			//if (ModelState.IsValid)
+            //{
+				_context.Add(attendance);
+				await _context.SaveChangesAsync();
+				return RedirectToAction(nameof(Index));
+			//}
             ViewData["ScheduleId"] = new SelectList(_context.Schedules, "Id", "Id", attendance.ScheduleId);
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", attendance.UserId);
-            return View(attendance);
-        }
+			return View(attendance);
+		}
 
         // GET: Attendances/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -85,7 +90,10 @@ namespace MVC_Attendance.Controllers
                 return NotFound();
             }
             ViewData["ScheduleId"] = new SelectList(_context.Schedules, "Id", "Id", attendance.ScheduleId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", attendance.UserId);
+            ViewData["UserId"] = new SelectList(_context.Users.Select(u => new {
+                Id = u.Id,
+                FullName = u.Id + ":" + u.FirstName + " " + u.LastName // Concatenate FirstName and LastName with a space
+            }), "Id", "FullName");
             return View(attendance);
         }
 
@@ -165,5 +173,26 @@ namespace MVC_Attendance.Controllers
         {
             return _context.Attendances.Any(e => e.Id == id);
         }
-    }
+
+
+		// _ With Repo _ //
+		//private IAttendanceRepository attendanceRepository;
+        //public AttendancesController(IAttendanceRepository _attendanceRepository)
+        //{
+		//	attendanceRepository = _attendanceRepository;
+		//}
+        // GET: Attendances
+        //public IActionResult Index()
+        //{
+        //    return View(attendanceRepository.GetAllAttendances());
+        //}
+        // GET: Attendances/Create
+        //public IActionResult Create()
+        //{
+        //    ViewData["ScheduleId"] = new SelectList(_context.Schedules, "Id", "Id");
+        //    ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+		//	return View();
+		//}
+	}   
+
 }
