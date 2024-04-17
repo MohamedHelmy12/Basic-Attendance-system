@@ -20,5 +20,36 @@ namespace MVC_Attendance.Repository
         {
             return db.StdIntakeTrack.Where(sit => sit.TrackId == trackId && sit.IntakeId == intakeId).Select(sit => sit.StudentId).ToList();
         }
+        public List<Student> GetAllStudents()
+        {
+            return db.Students.ToList();
+        }
+
+        public Student GetStudentById(int id)
+        {
+            return db.Students.FirstOrDefault(s => s.Id == id);
+        }
+
+        public void AddStudent(Student student)
+        {
+            db.Students.Add(student);
+            db.SaveChanges();
+        }
+
+        public void UpdateStudent(Student student)
+        {
+            db.Students.Update(student);
+            db.SaveChanges();
+        }
+
+        public void DeleteStudent(int id)
+        {
+            var student = db.Students.FirstOrDefault(s => s.Id == id);
+            if (student != null)
+            {
+                db.Students.Remove(student);
+                db.SaveChanges();
+            }
+        }
     }
 }

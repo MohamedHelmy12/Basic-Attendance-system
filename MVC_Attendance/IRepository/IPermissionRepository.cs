@@ -9,6 +9,6 @@ namespace MVC_Attendance.IRepository
         Permission GetPermission(int stdId, DateOnly date);
         List<Permission> GetPendingPermissions();
         List<Permission> GetSupervisorStudentsPermissions(int supervisorId);
-        void UpdatePermission(Permission permission, string status);
+        void UpdatePermission(Permission permission, PermissionStatus status);
     }
 }

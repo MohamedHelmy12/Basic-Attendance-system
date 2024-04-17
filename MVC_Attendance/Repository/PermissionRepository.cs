@@ -40,7 +40,7 @@ namespace MVC_Attendance.Repository
         {
             DateTime today = DateTime.Now.Date;
             // && DateTime.Compare(today, p.date.ToDateTime(TimeOnly.MinValue)) < 0
-            List<Permission> pending = db.Permissions.Include(p => p.Student).Where(p => p.Status == "pending" ).ToList();
+            List<Permission> pending = db.Permissions.Include(p => p.Student).Where(p => p.Status == PermissionStatus.Pending ).ToList();
             pending = pending.Where(p => DateTime.Compare(today, p.date.ToDateTime(TimeOnly.MinValue)) <= 0 ).ToList();
             return pending;
         }
@@ -62,7 +62,7 @@ namespace MVC_Attendance.Repository
             }
             return supervPermissions;
         }
-        public void updatePermissionStatus(Permission per, string status)
+        public void updatePermissionStatus(Permission per, PermissionStatus status)
         {
             var permission = db.Permissions.FirstOrDefault(p => p.StudentId == per.StudentId && p.date == per.date);
             if (permission != null)
@@ -82,9 +82,10 @@ namespace MVC_Attendance.Repository
         //    updatePermissionStatus(permission, "Rejected");
         //}
 
-        public void UpdatePermission(Permission permission, string status)
+        public void UpdatePermission(Permission permission, PermissionStatus status)
         {
             updatePermissionStatus(permission, status);
         }
+
     }
 }

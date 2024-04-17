@@ -16,6 +16,7 @@ namespace MVC_Attendance.Controllers
         private IScheduleRepository scheduleRepository;
         private IAttendanceRepository attendanceRepository;
         private IStudentRepository studentRepository;
+
         public instructorController(IPermissionRepository _permissionRepository, IInstructorRepository _instructorRepository, IAccountRepository _accountRepository, IScheduleRepository _scheduleRepository, IAttendanceRepository _attendanceRepository, IStudentRepository _studentRepository)
         {
             permissionRepository = _permissionRepository;
@@ -27,7 +28,7 @@ namespace MVC_Attendance.Controllers
         }
         public IActionResult Index()
         {
-            var instructors=db.Instructors.ToList();
+            var instructors=instructorRepository.GetAllInstructors();
             return View(instructors);
         }
         [HttpGet]
@@ -43,7 +44,7 @@ namespace MVC_Attendance.Controllers
             return View(permissions);
         }
 
-        public IActionResult UpdatePermission(int studentId, string date, string status)
+        public IActionResult UpdatePermission(int studentId, string date, PermissionStatus status)
         {
             DateOnly ddate = DateOnly.Parse(date);
             var permission = permissionRepository.GetPermission(studentId, ddate);
@@ -83,28 +84,24 @@ namespace MVC_Attendance.Controllers
         [HttpPost]
         public IActionResult Create(Instructor instructor)
         {
-            db.Instructors.Add(instructor);
-            db.SaveChanges();
+            instructorRepository.AddInstructor(instructor);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var instructor=db.Instructors.FirstOrDefault(x => x.Id == id);
+            var instructor=instructorRepository.GetInstructorById(id);
             return View(instructor);
         }
         [HttpPost]
         public IActionResult Edit(Instructor instructor)
         {
-            db.Instructors.Update(instructor);
-            db.SaveChanges();
+            instructorRepository.UpdateInstructor(instructor);
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            var instructor = db.Instructors.FirstOrDefault(x => x.Id == id);
-            db.Remove(instructor);
-            db.SaveChanges();
+            instructorRepository.DeleteInstructor(id);
             return RedirectToAction("Index");
 
         }
