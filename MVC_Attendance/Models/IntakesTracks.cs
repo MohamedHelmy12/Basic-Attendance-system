@@ -12,7 +12,8 @@ namespace MVC_Attendance.Models
 
         [ForeignKey(nameof(TrackId))]
         public virtual Track Track { get; set;}
-
         public string Status { get; set; } = "Active";
+                public DateOnly StartDate { get; set; }
+
     }
 }

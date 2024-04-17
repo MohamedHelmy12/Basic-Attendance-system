@@ -36,7 +36,7 @@ namespace MVC_Attendance.Models
         // Role Property is an Enum 
 
         [EnumDataType(typeof(Role))]
-        public Role role { get; set; }
+        public Role Role { get; set; }
         public virtual ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();
     }
 }

@@ -1,4 +1,4 @@
-﻿@model MVC_Attendance.Models.Student
+﻿@model MVC_Attendance.Models.StudentViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -14,61 +14,83 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UniversityID" class="control-label"></label>
-                <input asp-for="UniversityID" class="form-control" />
-                <span asp-validation-for="UniversityID" class="text-danger"></span>
+                <label asp-for="Student.UniversityID" class="control-label"></label>
+                <input asp-for="Student.UniversityID" class="form-control" />
+                <span asp-validation-for="Student.UniversityID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Faculty" class="control-label"></label>
-                <input asp-for="Faculty" class="form-control" />
-                <span asp-validation-for="Faculty" class="text-danger"></span>
+                <label asp-for="Student.Faculty" class="control-label"></label>
+                <input asp-for="Student.Faculty" class="form-control" />
+                <span asp-validation-for="Student.Faculty" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Specialization" class="control-label"></label>
-                <input asp-for="Specialization" class="form-control" />
-                <span asp-validation-for="Specialization" class="text-danger"></span>
+                <label asp-for="Student.Specialization" class="control-label"></label>
+                <input asp-for="Student.Specialization" class="form-control" />
+                <span asp-validation-for="Student.Specialization" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GraduationYear" class="control-label"></label>
-                <input asp-for="GraduationYear" class="form-control" />
-                <span asp-validation-for="GraduationYear" class="text-danger"></span>
+                <label asp-for="Student.GraduationYear" class="control-label"></label>
+                <input asp-for="Student.GraduationYear" class="form-control" />
+                <span asp-validation-for="Student.GraduationYear" class="text-danger"></span>
             </div>
-            
+
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <label asp-for="Student.FirstName" class="control-label"></label>
+                <input asp-for="Student.FirstName" class="form-control" />
+                <span asp-validation-for="Student.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="Student.LastName" class="control-label"></label>
+                <input asp-for="Student.LastName" class="form-control" />
+                <span asp-validation-for="Student.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <label asp-for="Student.Email" class="control-label"></label>
+                <input asp-for="Student.Email" class="form-control" />
+                <span asp-validation-for="Student.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
+                <label asp-for="Student.Password" class="control-label"></label>
+                <input asp-for="Student.Password" class="form-control" />
+                <span asp-validation-for="Student.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
+                <label asp-for="Student.Phone" class="control-label"></label>
+                <input asp-for="Student.Phone" class="form-control" />
+                <span asp-validation-for="Student.Phone" class="text-danger"></span>
             </div>
-           @*  <div class="form-group">
-                <label asp-for="role" class="control-label"></label>
-                <select asp-for="role" class="form-control"></select>
-                <span asp-validation-for="role" class="text-danger"></span>
-            </div> *@
+            <div class="form-group">
+                <label asp-for="Student.Address" class="control-label"></label>
+                <input asp-for="Student.Address" class="form-control" />
+                <span asp-validation-for="Student.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Address" class="control-label"></label>
+                <input asp-for="Student.Address" class="form-control" />
+                <span asp-validation-for="Student.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdIntakeTrack.Track" class="control-label"></label>
+                <select asp-for="StdIntakeTrack.Track" class="form-control">
+                    <option value="">Select Track</option>
+                    @foreach (var track in ViewBag.Tracks)
+                    {
+                        <option value="@track">@track.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="StdIntakeTrack.Track" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StdIntakeTrack.Intake" class="control-label"></label>
+                <select asp-for="StdIntakeTrack.Intake" class="form-control">
+                    <option value="">Select intake</option>
+                    @foreach (var intake in ViewBag.intakes)
+                    {
+                        <option value="@intake">@intake.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="StdIntakeTrack.Track" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -77,6 +99,5 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Show">Back to List</a>
 </div>
-

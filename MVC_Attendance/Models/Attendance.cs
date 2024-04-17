@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVC_Attendance.Models
@@ -6,7 +7,6 @@ namespace MVC_Attendance.Models
     public class Attendance
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        
         public int Id { get; set; }
 
         public DateOnly Date { get; set; }

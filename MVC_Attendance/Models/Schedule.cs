@@ -4,9 +4,10 @@ namespace MVC_Attendance.Models
 {
     public class Schedule
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public TimeOnly StartDate { get; set; }
-        public DateOnly Date { get; set; }
+        public TimeOnly StartPeriod { get; set; }
+        public DateOnly Date {  get; set; }
         public int TrackId { get; set; }
 
         [ForeignKey(nameof(TrackId))]

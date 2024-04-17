@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "ShowStudents";
+}
+
+@model List<MVC_Attendance.Models.Student>
+
+<h2>Students in Track</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <!-- Add more table headers for additional student properties -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.FirstName+""+@student.LastName</td>
+                    <!-- Add more table cells for additional student properties -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No students found in this track.</p>
+}
+
+
