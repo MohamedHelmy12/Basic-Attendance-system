@@ -98,22 +98,16 @@ namespace MVC_Attendance.Models
             // seeding the Schedules // Id, StartPeriod, TrackId
             // create list if schedules for trackId = 1;
 
-            List<Schedule> ScheduleList = new List<Schedule>();
             for (int i = 1; i <= 28; i++)
             {
                 int counter = 2 * (i - 1);
                 var schedule = new Schedule { Id = i, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, i), TrackId = 1 };
                 modelBuilder.Entity<Schedule>().HasData(schedule);
-                ScheduleList.Add(schedule);
-                // var insTrackIntake = instructorRepository.GetSupervisionInfo(5);
-                var trackStudentsIds = studentRepository.GetStudentsIdsInTrack(1, 1);
-                attendanceRepository.AddScheduleForTrackStudents(schedule, trackStudentsIds);
 
                 var att1 = new Attendance { Id = counter + 1, UserId = 2, ScheduleId = i};
                 var att2 = new Attendance { Id = counter + 2, UserId = 3, ScheduleId = i };
 
-                modelBuilder.Entity<Attendance>().HasData(att1);
-                modelBuilder.Entity<Attendance>().HasData(att2);
+                modelBuilder.Entity<Attendance>().HasData(att1, att2);
 
             }
 

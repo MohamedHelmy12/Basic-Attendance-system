@@ -192,8 +192,8 @@ namespace MVC_Attendance.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<DateOnly>(type: "date", nullable: false),
-                    AttendanceTime = table.Column<TimeOnly>(type: "time", nullable: false),
-                    LeavingTime = table.Column<TimeOnly>(type: "time", nullable: false),
+                    AttendanceTime = table.Column<TimeOnly>(type: "time", nullable: true),
+                    LeavingTime = table.Column<TimeOnly>(type: "time", nullable: true),
                     ScheduleId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -359,13 +359,34 @@ namespace MVC_Attendance.Migrations
                 columns: new[] { "Id", "Date", "StartPeriod", "TrackId" },
                 values: new object[,]
                 {
-                    { 1, new DateOnly(2024, 4, 20), new TimeOnly(9, 0, 0), 1 },
-                    { 2, new DateOnly(2024, 4, 21), new TimeOnly(9, 0, 0), 1 },
-                    { 3, new DateOnly(2024, 4, 22), new TimeOnly(9, 0, 0), 1 },
-                    { 4, new DateOnly(2024, 4, 23), new TimeOnly(9, 0, 0), 1 },
-                    { 5, new DateOnly(2024, 4, 24), new TimeOnly(9, 0, 0), 1 },
-                    { 6, new DateOnly(2024, 4, 25), new TimeOnly(9, 0, 0), 1 },
-                    { 7, new DateOnly(2024, 4, 27), new TimeOnly(9, 0, 0), 1 }
+                    { 1, new DateOnly(2024, 4, 1), new TimeOnly(9, 0, 0), 1 },
+                    { 2, new DateOnly(2024, 4, 2), new TimeOnly(9, 0, 0), 1 },
+                    { 3, new DateOnly(2024, 4, 3), new TimeOnly(9, 0, 0), 1 },
+                    { 4, new DateOnly(2024, 4, 4), new TimeOnly(9, 0, 0), 1 },
+                    { 5, new DateOnly(2024, 4, 5), new TimeOnly(9, 0, 0), 1 },
+                    { 6, new DateOnly(2024, 4, 6), new TimeOnly(9, 0, 0), 1 },
+                    { 7, new DateOnly(2024, 4, 7), new TimeOnly(9, 0, 0), 1 },
+                    { 8, new DateOnly(2024, 4, 8), new TimeOnly(9, 0, 0), 1 },
+                    { 9, new DateOnly(2024, 4, 9), new TimeOnly(9, 0, 0), 1 },
+                    { 10, new DateOnly(2024, 4, 10), new TimeOnly(9, 0, 0), 1 },
+                    { 11, new DateOnly(2024, 4, 11), new TimeOnly(9, 0, 0), 1 },
+                    { 12, new DateOnly(2024, 4, 12), new TimeOnly(9, 0, 0), 1 },
+                    { 13, new DateOnly(2024, 4, 13), new TimeOnly(9, 0, 0), 1 },
+                    { 14, new DateOnly(2024, 4, 14), new TimeOnly(9, 0, 0), 1 },
+                    { 15, new DateOnly(2024, 4, 15), new TimeOnly(9, 0, 0), 1 },
+                    { 16, new DateOnly(2024, 4, 16), new TimeOnly(9, 0, 0), 1 },
+                    { 17, new DateOnly(2024, 4, 17), new TimeOnly(9, 0, 0), 1 },
+                    { 18, new DateOnly(2024, 4, 18), new TimeOnly(9, 0, 0), 1 },
+                    { 19, new DateOnly(2024, 4, 19), new TimeOnly(9, 0, 0), 1 },
+                    { 20, new DateOnly(2024, 4, 20), new TimeOnly(9, 0, 0), 1 },
+                    { 21, new DateOnly(2024, 4, 21), new TimeOnly(9, 0, 0), 1 },
+                    { 22, new DateOnly(2024, 4, 22), new TimeOnly(9, 0, 0), 1 },
+                    { 23, new DateOnly(2024, 4, 23), new TimeOnly(9, 0, 0), 1 },
+                    { 24, new DateOnly(2024, 4, 24), new TimeOnly(9, 0, 0), 1 },
+                    { 25, new DateOnly(2024, 4, 25), new TimeOnly(9, 0, 0), 1 },
+                    { 26, new DateOnly(2024, 4, 26), new TimeOnly(9, 0, 0), 1 },
+                    { 27, new DateOnly(2024, 4, 27), new TimeOnly(9, 0, 0), 1 },
+                    { 28, new DateOnly(2024, 4, 28), new TimeOnly(9, 0, 0), 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -375,6 +396,69 @@ namespace MVC_Attendance.Migrations
                 {
                     { 2, 0.0, "Engineering", 2023, 0, "Computer Science", "Kafr El Shi5" },
                     { 3, 0.0, "Engineering", 2023, 0, "Mechancial Engineering", "Tanta" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Attendances",
+                columns: new[] { "Id", "AttendanceTime", "Date", "LeavingTime", "ScheduleId", "UserId" },
+                values: new object[,]
+                {
+                    { 1, null, new DateOnly(1, 1, 1), null, 1, 2 },
+                    { 2, null, new DateOnly(1, 1, 1), null, 1, 3 },
+                    { 3, null, new DateOnly(1, 1, 1), null, 2, 2 },
+                    { 4, null, new DateOnly(1, 1, 1), null, 2, 3 },
+                    { 5, null, new DateOnly(1, 1, 1), null, 3, 2 },
+                    { 6, null, new DateOnly(1, 1, 1), null, 3, 3 },
+                    { 7, null, new DateOnly(1, 1, 1), null, 4, 2 },
+                    { 8, null, new DateOnly(1, 1, 1), null, 4, 3 },
+                    { 9, null, new DateOnly(1, 1, 1), null, 5, 2 },
+                    { 10, null, new DateOnly(1, 1, 1), null, 5, 3 },
+                    { 11, null, new DateOnly(1, 1, 1), null, 6, 2 },
+                    { 12, null, new DateOnly(1, 1, 1), null, 6, 3 },
+                    { 13, null, new DateOnly(1, 1, 1), null, 7, 2 },
+                    { 14, null, new DateOnly(1, 1, 1), null, 7, 3 },
+                    { 15, null, new DateOnly(1, 1, 1), null, 8, 2 },
+                    { 16, null, new DateOnly(1, 1, 1), null, 8, 3 },
+                    { 17, null, new DateOnly(1, 1, 1), null, 9, 2 },
+                    { 18, null, new DateOnly(1, 1, 1), null, 9, 3 },
+                    { 19, null, new DateOnly(1, 1, 1), null, 10, 2 },
+                    { 20, null, new DateOnly(1, 1, 1), null, 10, 3 },
+                    { 21, null, new DateOnly(1, 1, 1), null, 11, 2 },
+                    { 22, null, new DateOnly(1, 1, 1), null, 11, 3 },
+                    { 23, null, new DateOnly(1, 1, 1), null, 12, 2 },
+                    { 24, null, new DateOnly(1, 1, 1), null, 12, 3 },
+                    { 25, null, new DateOnly(1, 1, 1), null, 13, 2 },
+                    { 26, null, new DateOnly(1, 1, 1), null, 13, 3 },
+                    { 27, null, new DateOnly(1, 1, 1), null, 14, 2 },
+                    { 28, null, new DateOnly(1, 1, 1), null, 14, 3 },
+                    { 29, null, new DateOnly(1, 1, 1), null, 15, 2 },
+                    { 30, null, new DateOnly(1, 1, 1), null, 15, 3 },
+                    { 31, null, new DateOnly(1, 1, 1), null, 16, 2 },
+                    { 32, null, new DateOnly(1, 1, 1), null, 16, 3 },
+                    { 33, null, new DateOnly(1, 1, 1), null, 17, 2 },
+                    { 34, null, new DateOnly(1, 1, 1), null, 17, 3 },
+                    { 35, null, new DateOnly(1, 1, 1), null, 18, 2 },
+                    { 36, null, new DateOnly(1, 1, 1), null, 18, 3 },
+                    { 37, null, new DateOnly(1, 1, 1), null, 19, 2 },
+                    { 38, null, new DateOnly(1, 1, 1), null, 19, 3 },
+                    { 39, null, new DateOnly(1, 1, 1), null, 20, 2 },
+                    { 40, null, new DateOnly(1, 1, 1), null, 20, 3 },
+                    { 41, null, new DateOnly(1, 1, 1), null, 21, 2 },
+                    { 42, null, new DateOnly(1, 1, 1), null, 21, 3 },
+                    { 43, null, new DateOnly(1, 1, 1), null, 22, 2 },
+                    { 44, null, new DateOnly(1, 1, 1), null, 22, 3 },
+                    { 45, null, new DateOnly(1, 1, 1), null, 23, 2 },
+                    { 46, null, new DateOnly(1, 1, 1), null, 23, 3 },
+                    { 47, null, new DateOnly(1, 1, 1), null, 24, 2 },
+                    { 48, null, new DateOnly(1, 1, 1), null, 24, 3 },
+                    { 49, null, new DateOnly(1, 1, 1), null, 25, 2 },
+                    { 50, null, new DateOnly(1, 1, 1), null, 25, 3 },
+                    { 51, null, new DateOnly(1, 1, 1), null, 26, 2 },
+                    { 52, null, new DateOnly(1, 1, 1), null, 26, 3 },
+                    { 53, null, new DateOnly(1, 1, 1), null, 27, 2 },
+                    { 54, null, new DateOnly(1, 1, 1), null, 27, 3 },
+                    { 55, null, new DateOnly(1, 1, 1), null, 28, 2 },
+                    { 56, null, new DateOnly(1, 1, 1), null, 28, 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -394,7 +478,7 @@ namespace MVC_Attendance.Migrations
             migrationBuilder.InsertData(
                 table: "Supervises",
                 columns: new[] { "InstructorId", "IntakeId", "TrackId" },
-                values: new object[] { 4, 1, 1 });
+                values: new object[] { 5, 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Attendances_ScheduleId",

@@ -30,13 +30,13 @@ namespace MVC_Attendance.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<TimeOnly>("AttendanceTime")
+                    b.Property<TimeOnly?>("AttendanceTime")
                         .HasColumnType("time");
 
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<TimeOnly>("LeavingTime")
+                    b.Property<TimeOnly?>("LeavingTime")
                         .HasColumnType("time");
 
                     b.Property<int>("ScheduleId")
@@ -52,6 +52,400 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Attendances");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 1,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 1,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 3,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 4,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 4,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 5,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 5,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 6,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 6,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 7,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 7,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 8,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 8,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 9,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 9,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 10,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 10,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 11,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 11,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 12,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 12,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 13,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 13,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 14,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 14,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 15,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 15,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 16,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 16,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 17,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 17,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 18,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 18,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 19,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 19,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 20,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 20,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 21,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 21,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 22,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 22,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 45,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 23,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 46,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 23,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 47,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 24,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 24,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 25,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 25,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 26,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 26,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 27,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 27,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 28,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Date = new DateOnly(1, 1, 1),
+                            ScheduleId = 28,
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.ITIProgram", b =>
@@ -198,49 +592,196 @@ namespace MVC_Attendance.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateOnly(2024, 4, 20),
+                            Date = new DateOnly(2024, 4, 1),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 2,
-                            Date = new DateOnly(2024, 4, 21),
+                            Date = new DateOnly(2024, 4, 2),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 3,
-                            Date = new DateOnly(2024, 4, 22),
+                            Date = new DateOnly(2024, 4, 3),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 4,
-                            Date = new DateOnly(2024, 4, 23),
+                            Date = new DateOnly(2024, 4, 4),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 5,
-                            Date = new DateOnly(2024, 4, 24),
+                            Date = new DateOnly(2024, 4, 5),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 6,
-                            Date = new DateOnly(2024, 4, 25),
+                            Date = new DateOnly(2024, 4, 6),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 7,
+                            Date = new DateOnly(2024, 4, 7),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Date = new DateOnly(2024, 4, 8),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Date = new DateOnly(2024, 4, 9),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Date = new DateOnly(2024, 4, 10),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Date = new DateOnly(2024, 4, 11),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Date = new DateOnly(2024, 4, 12),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Date = new DateOnly(2024, 4, 13),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Date = new DateOnly(2024, 4, 14),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Date = new DateOnly(2024, 4, 15),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Date = new DateOnly(2024, 4, 16),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Date = new DateOnly(2024, 4, 17),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Date = new DateOnly(2024, 4, 18),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Date = new DateOnly(2024, 4, 19),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Date = new DateOnly(2024, 4, 20),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Date = new DateOnly(2024, 4, 21),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Date = new DateOnly(2024, 4, 22),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Date = new DateOnly(2024, 4, 23),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Date = new DateOnly(2024, 4, 24),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Date = new DateOnly(2024, 4, 25),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Date = new DateOnly(2024, 4, 26),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 27,
                             Date = new DateOnly(2024, 4, 27),
+                            StartPeriod = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Date = new DateOnly(2024, 4, 28),
                             StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         });
@@ -304,7 +845,7 @@ namespace MVC_Attendance.Migrations
                         {
                             TrackId = 1,
                             IntakeId = 1,
-                            InstructorId = 4
+                            InstructorId = 5
                         });
                 });
 

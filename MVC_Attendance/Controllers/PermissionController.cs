@@ -12,7 +12,7 @@ namespace MVC_Attendance.Controllers
 
 {
     // [User.Role("Admin")]
-    [Authorize(Roles = "Instructor")]
+    // [Authorize(Roles = "Instructor")]
     public class PermissionController : Controller
     {
 		private readonly AttDbContext _context;
