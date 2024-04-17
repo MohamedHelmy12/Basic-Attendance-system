@@ -11,9 +11,9 @@ namespace MVC_Attendance.Models
 
         public DateOnly Date { get; set; }
 
-        public TimeOnly AttendanceTime { get; set; }
+        public TimeOnly? AttendanceTime { get; set; } = null;
 
-        public TimeOnly LeavingTime { get; set; }
+        public TimeOnly? LeavingTime { get; set; } = null;
 
         public int ScheduleId { get; set; }
 

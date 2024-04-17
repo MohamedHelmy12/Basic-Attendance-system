@@ -2,6 +2,7 @@
 using System.Drawing;
 
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using MVC_Attendance.Repository;
 
 namespace MVC_Attendance.Models
 {
@@ -10,9 +11,10 @@ namespace MVC_Attendance.Models
         public AttDbContext(DbContextOptions<AttDbContext> options) : base(options) { }
         public AttDbContext()
         { }
-
-
-
+        private ScheduleRepository scheduleRepository;
+        private AttendanceRepository attendanceRepository;
+        private StudentRepository studentRepository;
+        private InstructorRepository instructorRepository;
 
 		public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Student> Students { get; set; }
@@ -94,16 +96,31 @@ namespace MVC_Attendance.Models
             // 7 - Employee Security // Email: Ashraf@gmail, Password: admin@123
 
             // seeding the Schedules // Id, StartPeriod, TrackId
-            modelBuilder.Entity<Schedule>().HasData(
-                new Schedule { Id = 1, StartPeriod = new TimeOnly(9, 0),Date = new DateOnly(2024,4,20), TrackId = 1 },
-                new Schedule { Id = 2, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 21), TrackId = 1 },
-                new Schedule { Id = 3, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 22), TrackId = 1 },
-                new Schedule { Id = 4, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 23), TrackId = 1 },
-                new Schedule { Id = 5, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 24), TrackId = 1 },
-                new Schedule { Id = 6, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 25), TrackId = 1 },
-                new Schedule { Id = 7, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 27), TrackId = 1 }
+            // create list if schedules for trackId = 1;
 
-                );
+            for (int i = 1; i <= 28; i++)
+            {
+                int counter = 2 * (i - 1);
+                var schedule = new Schedule { Id = i, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, i), TrackId = 1 };
+                modelBuilder.Entity<Schedule>().HasData(schedule);
+
+                var att1 = new Attendance { Id = counter + 1, UserId = 2, ScheduleId = i};
+                var att2 = new Attendance { Id = counter + 2, UserId = 3, ScheduleId = i };
+
+                modelBuilder.Entity<Attendance>().HasData(att1, att2);
+
+            }
+
+            //modelBuilder.Entity<Schedule>().HasData(
+            //    new Schedule { Id = 1, StartPeriod = new TimeOnly(9, 0),Date = new DateOnly(2024,4,20), TrackId = 1 },
+            //    new Schedule { Id = 2, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 21), TrackId = 1 },
+            //    new Schedule { Id = 3, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 22), TrackId = 1 },
+            //    new Schedule { Id = 4, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 23), TrackId = 1 },
+            //    new Schedule { Id = 5, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 24), TrackId = 1 },
+            //    new Schedule { Id = 6, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 25), TrackId = 1 },
+            //    new Schedule { Id = 7, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 27), TrackId = 1 }
+
+            //    );
 
             // seeding the StdIntakeTrack // StudentId, IntakeId, TrackId
             modelBuilder.Entity<StdIntakeTrack>().HasData(
@@ -113,7 +130,7 @@ namespace MVC_Attendance.Models
 
             // seeding the Supervise // TrackId, IntakeId, InstructorId
             modelBuilder.Entity<Supervise>().HasData(
-                new Supervise { TrackId = 1, IntakeId = 1, InstructorId = 4 }
+                new Supervise { TrackId = 1, IntakeId = 1, InstructorId = 5 }
                 );
 
             // seeding the Permissions // StudentId, date
