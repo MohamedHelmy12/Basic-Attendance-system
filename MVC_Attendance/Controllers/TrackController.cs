@@ -35,7 +35,7 @@ namespace MVC_Attendance.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-
+            ViewData["supervisor"] = superviseRepository.GetAll();
             return View(new Track());
         }
         [HttpPost]
@@ -48,7 +48,7 @@ namespace MVC_Attendance.Controllers
             }
             else
             {
-                
+                ViewData["supervisor"] = superviseRepository.GetAll();
                 return View(track);
             }
           
