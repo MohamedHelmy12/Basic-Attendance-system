@@ -5,9 +5,7 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h1>Show</h1>
-
-<p>
+<div class="col-6">
     <a asp-action="Create">Create New</a>
 </p>
 
@@ -16,7 +14,7 @@
     <button id="searchButton">Search</button>
 </div>
 
-<table id="studentTable" class="table">
+<table id="studentTable" class="table table-responsive">
     <thead>
         <tr>
             <th>
@@ -114,7 +112,7 @@
 <div class="text-center" id="paginationContainer">
     <!-- Pagination buttons will be inserted here -->
 </div>
-
+</div>
     <script>
         $(document).ready(function () {
             $("#searchButton").click(function () {
