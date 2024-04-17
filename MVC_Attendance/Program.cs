@@ -33,7 +33,6 @@ namespace MVC_Attendance
                 options.LoginPath = "/Account/Login";
                 options.AccessDeniedPath = "/Account/AccessDenied";
             });
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -49,7 +48,8 @@ namespace MVC_Attendance
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                // pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Login}");
 
             app.Run();
         }

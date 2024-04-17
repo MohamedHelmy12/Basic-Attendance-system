@@ -4,6 +4,7 @@ namespace MVC_Attendance.Models
 {
     public class Schedule
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public TimeOnly StartPeriod { get; set; }
         public DateOnly Date {  get; set; }

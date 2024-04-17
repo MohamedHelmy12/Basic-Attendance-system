@@ -1,0 +1,63 @@
+﻿@model MVC_Attendance.Models.Attendance
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Attendance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttendanceTime" class="control-label"></label>
+                <input asp-for="AttendanceTime" class="form-control" />
+                <span asp-validation-for="AttendanceTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeavingTime" class="control-label"></label>
+                <input asp-for="LeavingTime" class="form-control" />
+                <span asp-validation-for="LeavingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScheduleId" class="control-label"></label>
+                <select asp-for="ScheduleId" class="form-control" asp-items="ViewBag.ScheduleId"></select>
+                <span asp-validation-for="ScheduleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
