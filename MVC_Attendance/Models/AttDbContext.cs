@@ -66,22 +66,22 @@ namespace MVC_Attendance.Models
 
             // seeding the Users, Students, Instructors, Employees
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, FirstName = "Admin", LastName = "Admin", Email = "Admin@admin.com", Password = "Admin@123", Phone = "01111111111", role = Role.Admin }); // User (Admin)
+                new User { Id = 1, FirstName = "Admin", LastName = "Admin", Email = "Admin@admin.com", Password = "Admin@123", Phone = "01111111111", Role = Role.Admin }); // User (Admin)
 
             modelBuilder.Entity<Student>().HasData(
-                new Student { Id = 2, FirstName = "Ali", LastName = "Ali2", Email = "Ali@gmail.com", Password = "Ali@123", Phone = "01111111111", role = Role.Student,
+                new Student { Id = 2, FirstName = "Ali", LastName = "Ali2", Email = "Ali@gmail.com", Password = "Ali@123", Phone = "01111111111", Role = Role.Student,
                 UniversityID = "Kafr El Shi5",Faculty = "Engineering",Specialization = "Computer Science",GraduationYear = 2023,Address = "Kafr El Shi5, Egypt"}, // Student
-                new Student { Id = 3, FirstName = "Ahmed", LastName = "Ahmed2", Email = "Ahmed@gmail.com", Password = "Ahmed@123", Phone = "01111111111", role = Role.Student,
+                new Student { Id = 3, FirstName = "Ahmed", LastName = "Ahmed2", Email = "Ahmed@gmail.com", Password = "Ahmed@123", Phone = "01111111111", Role = Role.Student,
                 UniversityID = "Tanta",Faculty = "Engineering",Specialization = "Mechancial Engineering",GraduationYear = 2023,Address = "Tanta, Egypt"}); // Student 
 
             modelBuilder.Entity<Instructor>().HasData(
-                new Instructor { Id = 4, FirstName = "Nadya", LastName = "Saleh", Email = "Nadya@gmail.com", Password = "Nadya@123", Phone = "01111111111", role = Role.Instructor }, // Instructor Supervisor
-                new Instructor { Id = 5, FirstName = "Ayman", LastName = "Lotfy", Email = "Ayman@gmail.com", Password = "Ayman@123", Phone = "01111111111", role = Role.Instructor }); // Instructor
+                new Instructor { Id = 4, FirstName = "Nadya", LastName = "Saleh", Email = "Nadya@gmail.com", Password = "Nadya@123", Phone = "01111111111", Role = Role.Instructor }, // Instructor Supervisor
+                new Instructor { Id = 5, FirstName = "Ayman", LastName = "Lotfy", Email = "Ayman@gmail.com", Password = "Ayman@123", Phone = "01111111111", Role = Role.Instructor }); // Instructor
 
             modelBuilder.Entity<Employee>().HasData(
-            new Employee { Id = 6, FirstName = "Mahmoud", LastName = "Mahmoud", Email = "Mahmoud@gmail.com", Password = "Mahmoud@123", Phone = "01111111111", role = Role.Employee,
+            new Employee { Id = 6, FirstName = "Mahmoud", LastName = "Mahmoud", Email = "Mahmoud@gmail.com", Password = "Mahmoud@123", Phone = "01111111111", Role = Role.Employee,
                 EmployeeType = EmployeeType.StudentAffairs,Salary = 10000,HireDate = new DateTime(2000, 1, 1)}, // Employee Student Affairs
-                new Employee { Id = 7, FirstName = "Ashraf", LastName = "Ashraf2", Email = "Ashraf@gmail.com", Password = "admin@123", Phone = "01111111111", role = Role.Employee,
+                new Employee { Id = 7, FirstName = "Ashraf", LastName = "Ashraf2", Email = "Ashraf@gmail.com", Password = "admin@123", Phone = "01111111111", Role = Role.Employee,
                 EmployeeType = EmployeeType.Security,Salary = 10000,HireDate = new DateTime(2001, 1, 1) // Employee Security
                 });
 
@@ -93,15 +93,15 @@ namespace MVC_Attendance.Models
             // 6 - Employee Student Affairs // Email: Mahmoud@gmail, Password: Mahmoud@123
             // 7 - Employee Security // Email: Ashraf@gmail, Password: admin@123
 
-            // seeding the Schedules // Id, StartDate, TrackId
+            // seeding the Schedules // Id, StartPeriod, TrackId
             modelBuilder.Entity<Schedule>().HasData(
-                new Schedule { Id = 1, StartDate = new TimeOnly(9, 0),Date = new DateOnly(2024,4,20), TrackId = 1 },
-                new Schedule { Id = 2, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 21), TrackId = 1 },
-                new Schedule { Id = 3, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 22), TrackId = 1 },
-                new Schedule { Id = 4, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 23), TrackId = 1 },
-                new Schedule { Id = 5, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 24), TrackId = 1 },
-                new Schedule { Id = 6, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 25), TrackId = 1 },
-                new Schedule { Id = 7, StartDate = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 27), TrackId = 1 }
+                new Schedule { Id = 1, StartPeriod = new TimeOnly(9, 0),Date = new DateOnly(2024,4,20), TrackId = 1 },
+                new Schedule { Id = 2, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 21), TrackId = 1 },
+                new Schedule { Id = 3, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 22), TrackId = 1 },
+                new Schedule { Id = 4, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 23), TrackId = 1 },
+                new Schedule { Id = 5, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 24), TrackId = 1 },
+                new Schedule { Id = 6, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 25), TrackId = 1 },
+                new Schedule { Id = 7, StartPeriod = new TimeOnly(9, 0), Date = new DateOnly(2024, 4, 27), TrackId = 1 }
 
                 );
 
@@ -126,7 +126,7 @@ namespace MVC_Attendance.Models
         {
             //optionsBuilder.UseSqlServer("Server=LAPTOP-4UUJ0C6J\\MSSQLSERVER02;Database=Attendance;integrated security = true; trust server certificate = true");
 
-        //}
+        }
     }
 
 }       

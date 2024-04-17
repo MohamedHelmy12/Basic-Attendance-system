@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2RBHQMMVmp8zpisGC9ez7TmDPIRlgQGFj1yXk7wWfIg=",
+  "Hash": "JHEp9ezddt+cghHuG7P0GGBhqKIAuMvztlpnwTDx76A=",
   "Source": "MVC_Attendance",
   "BasePath": "_content/MVC_Attendance",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC_Attendance.bundle.scp.css"
     },
     {
+      "Identity": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\admin.css",
+      "SourceId": "MVC_Attendance",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
+      "BasePath": "_content/MVC_Attendance",
+      "RelativePath": "css/admin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin.css"
+    },
+    {
       "Identity": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\site.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\admin.js",
+      "SourceId": "MVC_Attendance",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
+      "BasePath": "_content/MVC_Attendance",
+      "RelativePath": "js/admin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\admin.js"
     },
     {
       "Identity": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\site.js",

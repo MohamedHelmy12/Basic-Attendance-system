@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\MVC_Attendance.bundle.scp.css"
     },
     {
+      "Id": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
       "Id": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
     },
     {
       "Id": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\site.js",

@@ -126,6 +126,9 @@ namespace MVC_Attendance.Migrations
                     b.Property<int>("TrackId")
                         .HasColumnType("int");
 
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -141,6 +144,7 @@ namespace MVC_Attendance.Migrations
                         {
                             IntakeId = 1,
                             TrackId = 1,
+                            StartDate = new DateOnly(1, 1, 1),
                             Status = "Active"
                         });
                 });
@@ -178,7 +182,7 @@ namespace MVC_Attendance.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
-                    b.Property<TimeOnly>("StartDate")
+                    b.Property<TimeOnly>("StartPeriod")
                         .HasColumnType("time");
 
                     b.Property<int>("TrackId")
@@ -195,49 +199,49 @@ namespace MVC_Attendance.Migrations
                         {
                             Id = 1,
                             Date = new DateOnly(2024, 4, 20),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 2,
                             Date = new DateOnly(2024, 4, 21),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 3,
                             Date = new DateOnly(2024, 4, 22),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 4,
                             Date = new DateOnly(2024, 4, 23),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 5,
                             Date = new DateOnly(2024, 4, 24),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 6,
                             Date = new DateOnly(2024, 4, 25),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         },
                         new
                         {
                             Id = 7,
                             Date = new DateOnly(2024, 4, 27),
-                            StartDate = new TimeOnly(9, 0, 0),
+                            StartPeriod = new TimeOnly(9, 0, 0),
                             TrackId = 1
                         });
                 });
@@ -372,7 +376,7 @@ namespace MVC_Attendance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("role")
+                    b.Property<int>("Role")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -390,7 +394,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Admin",
                             Password = "Admin@123",
                             Phone = "01111111111",
-                            role = 3
+                            Role = 3
                         });
                 });
 
@@ -398,7 +402,7 @@ namespace MVC_Attendance.Migrations
                 {
                     b.HasBaseType("MVC_Attendance.Models.User");
 
-                    b.Property<int>("EmployeeType")
+                    b.Property<int?>("EmployeeType")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("HireDate")
@@ -418,7 +422,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Mahmoud",
                             Password = "Mahmoud@123",
                             Phone = "01111111111",
-                            role = 2,
+                            Role = 2,
                             EmployeeType = 0,
                             HireDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Salary = 10000.0
@@ -431,7 +435,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Ashraf2",
                             Password = "admin@123",
                             Phone = "01111111111",
-                            role = 2,
+                            Role = 2,
                             EmployeeType = 1,
                             HireDate = new DateTime(2001, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Salary = 10000.0
@@ -453,7 +457,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Saleh",
                             Password = "Nadya@123",
                             Phone = "01111111111",
-                            role = 1
+                            Role = 1
                         },
                         new
                         {
@@ -463,7 +467,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Lotfy",
                             Password = "Ayman@123",
                             Phone = "01111111111",
-                            role = 1
+                            Role = 1
                         });
                 });
 
@@ -478,7 +482,7 @@ namespace MVC_Attendance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GraduationYear")
+                    b.Property<int?>("GraduationYear")
                         .HasColumnType("int");
 
                     b.Property<int>("NumberOfAbsences")
@@ -504,7 +508,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Ali2",
                             Password = "Ali@123",
                             Phone = "01111111111",
-                            role = 0,
+                            Role = 0,
                             AbsenceDegree = 0.0,
                             Faculty = "Engineering",
                             GraduationYear = 2023,
@@ -521,7 +525,7 @@ namespace MVC_Attendance.Migrations
                             LastName = "Ahmed2",
                             Password = "Ahmed@123",
                             Phone = "01111111111",
-                            role = 0,
+                            Role = 0,
                             AbsenceDegree = 0.0,
                             Faculty = "Engineering",
                             GraduationYear = 2023,

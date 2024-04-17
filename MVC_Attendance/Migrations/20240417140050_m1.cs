@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MVC_Attendance.Migrations
 {
     /// <inheritdoc />
-    public partial class addmigrationm5 : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,7 @@ namespace MVC_Attendance.Migrations
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    role = table.Column<int>(type: "int", nullable: false)
+                    Role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -84,7 +84,7 @@ namespace MVC_Attendance.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    StartDate = table.Column<TimeOnly>(type: "time", nullable: false),
+                    StartPeriod = table.Column<TimeOnly>(type: "time", nullable: false),
                     Date = table.Column<DateOnly>(type: "date", nullable: false),
                     TrackId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -104,7 +104,7 @@ namespace MVC_Attendance.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    EmployeeType = table.Column<int>(type: "int", nullable: false),
+                    EmployeeType = table.Column<int>(type: "int", nullable: true),
                     Salary = table.Column<double>(type: "float", nullable: false),
                     HireDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -123,7 +123,7 @@ namespace MVC_Attendance.Migrations
                 name: "Instructors",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)    
+                    Id = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -144,7 +144,7 @@ namespace MVC_Attendance.Migrations
                     UniversityID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Faculty = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Specialization = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GraduationYear = table.Column<int>(type: "int", nullable: false),
+                    GraduationYear = table.Column<int>(type: "int", nullable: true),
                     AbsenceDegree = table.Column<double>(type: "float", nullable: false),
                     NumberOfAbsences = table.Column<int>(type: "int", nullable: false)
                 },
@@ -165,7 +165,8 @@ namespace MVC_Attendance.Migrations
                 {
                     IntakeId = table.Column<int>(type: "int", nullable: false),
                     TrackId = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StartDate = table.Column<DateOnly>(type: "date", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -318,7 +319,7 @@ namespace MVC_Attendance.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "Address", "Email", "FirstName", "LastName", "Password", "Phone", "role" },
+                columns: new[] { "Id", "Address", "Email", "FirstName", "LastName", "Password", "Phone", "Role" },
                 values: new object[,]
                 {
                     { 1, null, "Admin@admin.com", "Admin", "Admin", "Admin@123", "01111111111", 3 },
@@ -355,7 +356,7 @@ namespace MVC_Attendance.Migrations
 
             migrationBuilder.InsertData(
                 table: "Schedules",
-                columns: new[] { "Id", "Date", "StartDate", "TrackId" },
+                columns: new[] { "Id", "Date", "StartPeriod", "TrackId" },
                 values: new object[,]
                 {
                     { 1, new DateOnly(2024, 4, 20), new TimeOnly(9, 0, 0), 1 },
@@ -378,8 +379,8 @@ namespace MVC_Attendance.Migrations
 
             migrationBuilder.InsertData(
                 table: "IntakesTracks",
-                columns: new[] { "IntakeId", "TrackId", "Status" },
-                values: new object[] { 1, 1, "Active" });
+                columns: new[] { "IntakeId", "TrackId", "StartDate", "Status" },
+                values: new object[] { 1, 1, new DateOnly(1, 1, 1), "Active" });
 
             migrationBuilder.InsertData(
                 table: "StdIntakeTrack",
