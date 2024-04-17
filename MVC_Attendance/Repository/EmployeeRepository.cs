@@ -1,4 +1,5 @@
-﻿using MVC_Attendance.Models;
+﻿using MVC_Attendance.IRepository;
+using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Repository
 {
@@ -19,7 +20,7 @@ namespace MVC_Attendance.Repository
         }
         public void Add(Employee emp)
         {
-          emp.role=Role.Employee;
+          emp.Role=Role.Employee;
             db.Employees.Add(emp);
             db.SaveChanges();
         }
