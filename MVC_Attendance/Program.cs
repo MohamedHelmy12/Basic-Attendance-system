@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 using MVC_Attendance.Repository;
 
@@ -21,9 +22,13 @@ namespace MVC_Attendance
             builder.Services.AddScoped<IStudentRepository, StudentRepository>();
             builder.Services.AddScoped<ISuperviseRepository, SuperviseRepository>();
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
 
 
-                
+
+
+
+
 
             var app = builder.Build();
 

@@ -1,38 +1,37 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MVC_Attendance.Models;
 using MVC_Attendance.Repository;
 
+
+
 namespace MVC_Attendance.Controllers
 {
+    
     public class SupervisorController : Controller
     {
         private readonly ISuperviseRepository _superviseRepository;
-      //  private readonly IInstructorRepository _instructorRepository;
+        private readonly InstructorRepository _instructorRepository;
         private readonly ITrackRepository _trackRepository;
 
         public SupervisorController(ISuperviseRepository superviseRepository,
+                                    InstructorRepository instructorRepository,
                                     ITrackRepository trackRepository)
         {
             _superviseRepository = superviseRepository;
-           
+            _instructorRepository = instructorRepository;
             _trackRepository = trackRepository;
         }
 
         // GET: Supervisor/Add
         public IActionResult Add()
         {
-            
-            List<Instructor> instructors = _instructorRepository.GetAll();
-            List<Track> tracks = _trackRepository.GetAll();
 
-            
-            var viewModel = new SupervisorAddViewModel
-            {
-                Instructors = instructors,
-                Tracks = tracks
-            };
+            List<Instructor> instructorss = _instructorRepository.GetAll();
+            List<Track> trackss = _trackRepository.GetAll();
 
-            return View(viewModel);
+
+
+            return View(instructorss);
         }
 
         // POST: Supervisor/Add
@@ -48,18 +47,19 @@ namespace MVC_Attendance.Controllers
                 return NotFound();
             }
 
-            
+
             Supervise supervise = new Supervise
             {
                 InstructorId = instructorId,
                 TrackId = trackId
             };
 
-            
+
             _superviseRepository.Add(supervise);
 
-            return RedirectToAction("Index", "Home"); 
+            return RedirectToAction("Index", "Home");
         }
     }
+
+  
 }
-*/
