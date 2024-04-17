@@ -6,10 +6,16 @@ namespace MVC_Attendance.Repository
     public class InstructorRepository : IInstructorRepository
     {
         private readonly AttDbContext db;
-
+        
         public InstructorRepository(AttDbContext _db)
         {
             db = _db;
+        }
+
+        public void AddInstructor(Instructor instructor)
+        {
+            db.Instructors.Add(instructor);
+            db.SaveChanges();
         }
         public Supervise GetSupervisionInfo(int insId)
         {
@@ -17,33 +23,35 @@ namespace MVC_Attendance.Repository
             return supervisionInfo;
         }
 
-        public List<Instructor> GetAll()
+        public void DeleteInstructor(int id)
         {
-            return db.Instructors.ToList();
-        }
-        public Instructor GetById(int id)
-        {
-            return db.Instructors.FirstOrDefault(ins => ins.Id == id);
-        }
-        public void Add(Instructor instructor )
-        {
-            db.Instructors.Add(instructor);
+            var instructor = db.Instructors.FirstOrDefault(x => x.Id == id);
+            db.Remove(instructor);
             db.SaveChanges();
         }
-        public void Update(int id, Instructor instructor )
+
+        public List<Instructor> GetAllInstructors()
+        {
+            var instructors = db.Instructors.ToList();
+            return instructors;
+        }
+
+        public Instructor GetInstructorById(int id)
+        {
+            var instructor = db.Instructors.FirstOrDefault(x => x.Id == id);
+            return instructor;
+        }
+        public void Update(int id, Instructor instructor)
         {
             db.Instructors.Update(instructor);
             db.SaveChanges();
-
         }
-        public void Delete(int id)
+
+        public void UpdateInstructor(Instructor instructor)
         {
-            Instructor instructor = GetById(id);
-            db.Instructors.Remove(instructor);
+            db.Instructors.Update(instructor);
             db.SaveChanges();
         }
-
-       
 
     }
 }

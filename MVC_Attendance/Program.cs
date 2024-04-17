@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MVC_Attendance.IRepository;
-using MVC_Attendance.Models;
 using MVC_Attendance.Repository;
+using MVC_Attendance.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MVC_Attendance
 {
@@ -15,20 +16,23 @@ namespace MVC_Attendance
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AttDbContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("con1"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+            builder.Services.AddScoped < IPermissionRepository, PermissionRepository >();
+            builder.Services.AddScoped < IStudentRepository, StudentRepository >();
+            builder.Services.AddScoped < IInstructorRepository, InstructorRepository >();
+            builder.Services.AddScoped < IAccountRepository, AccountRepository >();
+            builder.Services.AddScoped < ITrackRepository, TrackRepository >();
+            builder.Services.AddScoped < IScheduleRepository, ScheduleRepository >();
+            builder.Services.AddScoped < IAttendanceRepository, AttendanceRepository >();
+            builder.Services.AddScoped < IEmployeeRepository, EmployeeRepository >();
+            builder.Services.AddScoped< ISuperviseRepository, SuperviseRepository >();
 
-            builder.Services.AddScoped<ITrackRepository, TrackRepository>();
-            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-            builder.Services.AddScoped<ISuperviseRepository, SuperviseRepository>();
-            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            builder.Services.AddScoped<IInstructorRepository, InstructorRepository>();
-
-
-
-
-
-
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+            });
 
             var app = builder.Build();
 
@@ -40,7 +44,7 @@ namespace MVC_Attendance
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

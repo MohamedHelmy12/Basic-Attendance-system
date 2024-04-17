@@ -1,11 +1,11 @@
 ﻿using MVC_Attendance.Models;
 
-namespace MVC_Attendance.Repository
+namespace MVC_Attendance.IRepository
 {
     public class ITIProgramRepository
     {
         AttDbContext db;
-        public ITIProgramRepository (AttDbContext db )
+        public ITIProgramRepository(AttDbContext db)
         {
             this.db = db;
         }

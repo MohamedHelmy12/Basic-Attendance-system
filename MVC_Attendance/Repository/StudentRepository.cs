@@ -1,44 +1,62 @@
-﻿using MVC_Attendance.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MVC_Attendance.IRepository;
+using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Repository
 {
     public class StudentRepository : IStudentRepository
     {
-        AttDbContext db;
-
-        public StudentRepository(AttDbContext db)
+        private readonly AttDbContext db;
+        public StudentRepository(AttDbContext _db)
         {
-            this.db = db;
+            db = _db;
         }
-        public List<Student> GetAll()
+        public StdIntakeTrack GetStdIntakeTrack(int studentId)
+        {
+            return db.StdIntakeTrack.Include(sit => sit.Track).Include(sit => sit.Intake).FirstOrDefault(sit => sit.StudentId == studentId);
+        }
+
+        public List<int> GetStudentsIdsInTrack(int trackId, int intakeId)
+        {
+            return db.StdIntakeTrack.Where(sit => sit.TrackId == trackId && sit.IntakeId == intakeId).Select(sit => sit.StudentId).ToList();
+        }
+        public List<Student> GetAllStudents()
         {
             return db.Students.ToList();
         }
-        public Student GetById(int id)
+
+        public Student GetStudentById(int id)
         {
-            return db.Students.FirstOrDefault(studen => studen.Id == id);
+            return db.Students.FirstOrDefault(s => s.Id == id);
         }
-        public void Add(Student student)
+
+        public void AddStudent(Student student)
         {
             db.Students.Add(student);
             db.SaveChanges();
         }
-        public void Update(int id, Student student )
+
+        public void UpdateStudent(Student student)
         {
             db.Students.Update(student);
             db.SaveChanges();
 
         }
-        public void Delete(int id)
+
+        public void DeleteStudent(int id)
         {
-            Student student = GetById(id);
-            db.Students.Remove(student);
-            db.SaveChanges();
+            var student = db.Students.FirstOrDefault(s => s.Id == id);
+            if (student != null)
+            {
+                student = GetStudentById(id);
+                db.Students.Remove(student);
+                db.SaveChanges();
+            }
         }
 
         public List<Student> GetStudentsByTrackId(int trackId)
         {
-           
+
             var studentsInTrack = db.StdIntakeTrack
                 .Where(sit => sit.TrackId == trackId)
                 .Select(sit => sit.Student)
@@ -48,3 +66,5 @@ namespace MVC_Attendance.Repository
         }
     }
 }
+
+

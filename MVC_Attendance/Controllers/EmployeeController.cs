@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
-using MVC_Attendance.Repository;
 
 namespace MVC_Attendance.Controllers
 {

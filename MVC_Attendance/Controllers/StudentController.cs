@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Controllers
 {
     public class StudentController : Controller
     {
-        AttDbContext db;
-        public StudentController(AttDbContext db)
+        private readonly AttDbContext db;
+        private readonly IStudentRepository studentRepository;
+        public StudentController(AttDbContext _db, IStudentRepository _studentRepository)
         {
-            this.db = db;
+            db = _db;
+            studentRepository = _studentRepository;
         }
         public IActionResult Index()
         {
@@ -58,8 +61,7 @@ namespace MVC_Attendance.Controllers
             var student = viewModel.Student;
 
             // Add the student to the database
-            db.Students.Add(student);
-            db.SaveChanges();
+            studentRepository.AddStudent(student);
 
             // Redirect to the "Show" action
             return RedirectToAction("Show");
@@ -67,7 +69,7 @@ namespace MVC_Attendance.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var student = db.Students.FirstOrDefault(std => std.Id == id);
+            var student = studentRepository.GetStudentById(id);
             var viewModel = new StudentViewModel { Student = student };
             return View(viewModel);
         }
@@ -80,24 +82,34 @@ namespace MVC_Attendance.Controllers
                 return View(viewModel); // Return the view with validation errors
             }
 
-            var student = viewModel.Student;
+            // Map properties from the view model to the student entity
+            var student = new Student
+            {
+                Id = viewModel.Student.Id,
+                UniversityID = viewModel.Student.UniversityID,
+                Faculty = viewModel.Student.Faculty,
+                Specialization = viewModel.Student.Specialization,
+                GraduationYear = viewModel.Student.GraduationYear,
+                FirstName = viewModel.Student.FirstName,
+                LastName = viewModel.Student.LastName,
+                Email = viewModel.Student.Email,
+                Password = viewModel.Student.Password,
+                Phone = viewModel.Student.Phone,
+                Address = viewModel.Student.Address,
+            };
 
-            db.Students.Update(student);
-            db.SaveChanges();
+            // Update the student using the repository
+            studentRepository.UpdateStudent(student);
 
             return RedirectToAction("Show");
         }
+
 
         public IActionResult Delete(int id)
         {
-            var student = db.Students.FirstOrDefault(i => i.Id == id);
-            db.Students.Remove(student);
-            db.SaveChanges();
+            studentRepository.DeleteStudent(id);
             return RedirectToAction("Show");
         }
-
-
-
 
     }
 }

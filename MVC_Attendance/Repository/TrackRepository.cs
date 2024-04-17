@@ -1,20 +1,21 @@
-﻿using MVC_Attendance.Models;
+﻿using MVC_Attendance.IRepository;
+using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Repository
 {
     public class TrackRepository:ITrackRepository
     {
-        AttDbContext db;
 
-        public TrackRepository(AttDbContext db)
+        private AttDbContext db;
+        public TrackRepository(AttDbContext _db)
         {
-            this.db = db;
+            db = _db;
         }
         public List<Track> GetAll()
         {
             return db.Tracks.ToList();
         }
-    public Track GetById(int id)
+        public Track GetById(int id)
         {
             return db.Tracks.FirstOrDefault( track => track.Id == id);
         }
@@ -27,11 +28,14 @@ namespace MVC_Attendance.Repository
         {
             db.Tracks.Update(track);
             db.SaveChanges();
-
+        }
+        public DateOnly GetTrackStartDate(int trackId, int intakeId)
+        {
+            return db.IntakesTracks.FirstOrDefault(it => it.TrackId == trackId && it.IntakeId == intakeId).StartDate;
         }
         public void Delete(int id)
         {
-          Track track=  GetById(id);
+            Track track=  GetById(id);
             db.Tracks.Remove(track);
             db.SaveChanges();
         }

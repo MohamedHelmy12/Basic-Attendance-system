@@ -1,6 +1,6 @@
 ﻿using MVC_Attendance.Models;
 
-namespace MVC_Attendance.Repository
+namespace MVC_Attendance.IRepository
 {
     public interface IEmployeeRepository
     {
@@ -8,7 +8,7 @@ namespace MVC_Attendance.Repository
 
         Employee GetById(int id);
 
-        void Add(Employee employe );
+        void Add(Employee employe);
 
         void Update(int id, Employee employe);
 
