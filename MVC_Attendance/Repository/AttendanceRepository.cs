@@ -28,5 +28,10 @@ namespace MVC_Attendance.Repository
                 AddAttendance(schedule, studentId);
             }
         }
+
+        public List<Attendance> GetTrackAttendancesinSchedual(int scheduleId)
+        {
+            return db.Attendances.Where(a => a.ScheduleId == scheduleId).ToList();
+        }
     }
 }

@@ -1,15 +1,22 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using MVC_Attendance.Models;
+using System.Configuration;
+using System.Security.Claims;
 
 namespace MVC_Attendance.Controllers
+
 {
+    // [User.Role("Admin")]
+    [Authorize(Roles = "Instructor")]
     public class PermissionController : Controller
     {
 		private readonly AttDbContext _context;
+
 
         public PermissionController(AttDbContext context)
         {
@@ -19,6 +26,8 @@ namespace MVC_Attendance.Controllers
 		// GET: PermissionController
 		public ActionResult Index()
         {
+            // var user = User.FindFirst(ClaimTypes.Role).Value;
+
             var permissions = _context.Permissions.Include(p => p.Student).ToList();
             return View(permissions);
         }
