@@ -54,6 +54,8 @@ namespace MVC_Attendance.Controllers
             ViewBag.PermissionTypes = GetPermissionTypes();
             ViewBag.StatusTypes = GetStatusTypes();
 
+            
+
             return View();
         }
         [HttpPost]

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC_Attendance.Migrations
 {
     [DbContext(typeof(AttDbContext))]
-    [Migration("20240409131211_m1")]
+    [Migration("20240417124206_m1")]
     partial class m1
     {
         /// <inheritdoc />
@@ -72,6 +72,23 @@ namespace MVC_Attendance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ITIPrograms");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Professional Training Program"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Intensive Training Program"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Summer Training Program"
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Intake", b =>
@@ -94,6 +111,14 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("ProgramId");
 
                     b.ToTable("Intakes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "44",
+                            ProgramId = 1
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.IntakesTracks", b =>
@@ -113,6 +138,14 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("IntakesTracks");
+
+                    b.HasData(
+                        new
+                        {
+                            IntakeId = 1,
+                            TrackId = 1,
+                            Status = "Active"
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Permission", b =>
@@ -145,6 +178,9 @@ namespace MVC_Attendance.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
                     b.Property<TimeOnly>("StartDate")
                         .HasColumnType("time");
 
@@ -156,6 +192,57 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("Schedules");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Date = new DateOnly(2024, 4, 20),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Date = new DateOnly(2024, 4, 21),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Date = new DateOnly(2024, 4, 22),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Date = new DateOnly(2024, 4, 23),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Date = new DateOnly(2024, 4, 24),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Date = new DateOnly(2024, 4, 25),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Date = new DateOnly(2024, 4, 27),
+                            StartDate = new TimeOnly(9, 0, 0),
+                            TrackId = 1
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.StdIntakeTrack", b =>
@@ -176,6 +263,20 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("StdIntakeTrack");
+
+                    b.HasData(
+                        new
+                        {
+                            IntakeId = 1,
+                            TrackId = 1,
+                            StudentId = 2
+                        },
+                        new
+                        {
+                            IntakeId = 1,
+                            TrackId = 1,
+                            StudentId = 3
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Supervise", b =>
@@ -196,6 +297,14 @@ namespace MVC_Attendance.Migrations
                     b.HasIndex("IntakeId");
 
                     b.ToTable("Supervises");
+
+                    b.HasData(
+                        new
+                        {
+                            TrackId = 1,
+                            IntakeId = 1,
+                            InstructorId = 4
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Track", b =>
@@ -213,6 +322,23 @@ namespace MVC_Attendance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tracks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Professional Web Development and BI"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Open Source"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Artificial Intelegence"
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.User", b =>
@@ -224,7 +350,6 @@ namespace MVC_Attendance.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -258,6 +383,18 @@ namespace MVC_Attendance.Migrations
                     b.ToTable("Users");
 
                     b.UseTptMappingStrategy();
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "Admin@admin.com",
+                            FirstName = "Admin",
+                            LastName = "Admin",
+                            Password = "Admin@123",
+                            Phone = "01111111111",
+                            role = 3
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Employee", b =>
@@ -274,6 +411,34 @@ namespace MVC_Attendance.Migrations
                         .HasColumnType("float");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 6,
+                            Email = "Mahmoud@gmail.com",
+                            FirstName = "Mahmoud",
+                            LastName = "Mahmoud",
+                            Password = "Mahmoud@123",
+                            Phone = "01111111111",
+                            role = 2,
+                            EmployeeType = 0,
+                            HireDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Salary = 10000.0
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Email = "Ashraf@gmail.com",
+                            FirstName = "Ashraf",
+                            LastName = "Ashraf2",
+                            Password = "admin@123",
+                            Phone = "01111111111",
+                            role = 2,
+                            EmployeeType = 1,
+                            HireDate = new DateTime(2001, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Salary = 10000.0
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Instructor", b =>
@@ -281,6 +446,28 @@ namespace MVC_Attendance.Migrations
                     b.HasBaseType("MVC_Attendance.Models.User");
 
                     b.ToTable("Instructors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 4,
+                            Email = "Nadya@gmail.com",
+                            FirstName = "Nadya",
+                            LastName = "Saleh",
+                            Password = "Nadya@123",
+                            Phone = "01111111111",
+                            role = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Email = "Ayman@gmail.com",
+                            FirstName = "Ayman",
+                            LastName = "Lotfy",
+                            Password = "Ayman@123",
+                            Phone = "01111111111",
+                            role = 1
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Student", b =>
@@ -309,6 +496,42 @@ namespace MVC_Attendance.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            Address = "Kafr El Shi5, Egypt",
+                            Email = "Ali@gmail.com",
+                            FirstName = "Ali",
+                            LastName = "Ali2",
+                            Password = "Ali@123",
+                            Phone = "01111111111",
+                            role = 0,
+                            AbsenceDegree = 0.0,
+                            Faculty = "Engineering",
+                            GraduationYear = 2023,
+                            NumberOfAbsences = 0,
+                            Specialization = "Computer Science",
+                            UniversityID = "Kafr El Shi5"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Address = "Tanta, Egypt",
+                            Email = "Ahmed@gmail.com",
+                            FirstName = "Ahmed",
+                            LastName = "Ahmed2",
+                            Password = "Ahmed@123",
+                            Phone = "01111111111",
+                            role = 0,
+                            AbsenceDegree = 0.0,
+                            Faculty = "Engineering",
+                            GraduationYear = 2023,
+                            NumberOfAbsences = 0,
+                            Specialization = "Mechancial Engineering",
+                            UniversityID = "Tanta"
+                        });
                 });
 
             modelBuilder.Entity("MVC_Attendance.Models.Attendance", b =>

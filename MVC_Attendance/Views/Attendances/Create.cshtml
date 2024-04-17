@@ -26,21 +26,21 @@
             </div>
             <div class="form-group">
                 <label asp-for="AttendanceTime" class="control-label"></label>
-                <input type="time" asp-for="AttendanceTime" class="form-control" />
+                <input id="AttendanceTimeId" type="time" asp-for="AttendanceTime" class="form-control" />
                 <span asp-validation-for="AttendanceTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LeavingTime" class="control-label"></label>
-                <input type="time" asp-for="LeavingTime" class="form-control" />
+                    <input id="LeavingTimeId" type="time" asp-for="LeavingTime" class="form-control" />
                 <span asp-validation-for="LeavingTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ScheduleId" class="control-label"></label>
-                <select asp-for="ScheduleId" class ="form-control" asp-items="ViewBag.ScheduleId"></select>
+                    <select asp-for="ScheduleId" class="form-control" asp-items="ViewBag.ScheduleId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+                    <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -56,5 +56,26 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+<script>
+        // make sure that the AttendanceTime is less than LeavingTime (js)
+    document.getElementById('AttendanceTimeId').addEventListener('change', function() {
+		var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+		var LeavingTime = document.getElementById('LeavingTimeId').value;
+        
+		if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+			alert('AttendanceTime should be less than LeavingTime');
+			document.getElementById('AttendanceTimeId').value = '';
+		}
+	});
+    document.getElementById('LeavingTimeId').addEventListener('change', function() {
+		var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+		var LeavingTime = document.getElementById('LeavingTimeId').value;
+        if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+		alert('AttendanceTime should be less than LeavingTime');
+		document.getElementById('LeavingTimeId').value = '';
+		}
+	});
+
+</script>
 </body>
 </html>

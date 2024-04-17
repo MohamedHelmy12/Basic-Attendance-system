@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace MVC_Attendance.Migrations
 {
     /// <inheritdoc />
@@ -48,7 +50,7 @@ namespace MVC_Attendance.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -83,6 +85,7 @@ namespace MVC_Attendance.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StartDate = table.Column<TimeOnly>(type: "time", nullable: false),
+                    Date = table.Column<DateOnly>(type: "date", nullable: false),
                     TrackId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -292,6 +295,105 @@ namespace MVC_Attendance.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "ITIPrograms",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Professional Training Program" },
+                    { 2, "Intensive Training Program" },
+                    { 3, "Summer Training Program" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Tracks",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Professional Web Development and BI" },
+                    { 2, "Open Source" },
+                    { 3, "Artificial Intelegence" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Address", "Email", "FirstName", "LastName", "Password", "Phone", "role" },
+                values: new object[,]
+                {
+                    { 1, null, "Admin@admin.com", "Admin", "Admin", "Admin@123", "01111111111", 3 },
+                    { 2, "Kafr El Shi5, Egypt", "Ali@gmail.com", "Ali", "Ali2", "Ali@123", "01111111111", 0 },
+                    { 3, "Tanta, Egypt", "Ahmed@gmail.com", "Ahmed", "Ahmed2", "Ahmed@123", "01111111111", 0 },
+                    { 4, null, "Nadya@gmail.com", "Nadya", "Saleh", "Nadya@123", "01111111111", 1 },
+                    { 5, null, "Ayman@gmail.com", "Ayman", "Lotfy", "Ayman@123", "01111111111", 1 },
+                    { 6, null, "Mahmoud@gmail.com", "Mahmoud", "Mahmoud", "Mahmoud@123", "01111111111", 2 },
+                    { 7, null, "Ashraf@gmail.com", "Ashraf", "Ashraf2", "admin@123", "01111111111", 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Employees",
+                columns: new[] { "Id", "EmployeeType", "HireDate", "Salary" },
+                values: new object[,]
+                {
+                    { 6, 0, new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 10000.0 },
+                    { 7, 1, new DateTime(2001, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 10000.0 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Instructors",
+                column: "Id",
+                values: new object[]
+                {
+                    4,
+                    5
+                });
+
+            migrationBuilder.InsertData(
+                table: "Intakes",
+                columns: new[] { "Id", "Name", "ProgramId" },
+                values: new object[] { 1, "44", 1 });
+
+            migrationBuilder.InsertData(
+                table: "Schedules",
+                columns: new[] { "Id", "Date", "StartDate", "TrackId" },
+                values: new object[,]
+                {
+                    { 1, new DateOnly(2024, 4, 20), new TimeOnly(9, 0, 0), 1 },
+                    { 2, new DateOnly(2024, 4, 21), new TimeOnly(9, 0, 0), 1 },
+                    { 3, new DateOnly(2024, 4, 22), new TimeOnly(9, 0, 0), 1 },
+                    { 4, new DateOnly(2024, 4, 23), new TimeOnly(9, 0, 0), 1 },
+                    { 5, new DateOnly(2024, 4, 24), new TimeOnly(9, 0, 0), 1 },
+                    { 6, new DateOnly(2024, 4, 25), new TimeOnly(9, 0, 0), 1 },
+                    { 7, new DateOnly(2024, 4, 27), new TimeOnly(9, 0, 0), 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Students",
+                columns: new[] { "Id", "AbsenceDegree", "Faculty", "GraduationYear", "NumberOfAbsences", "Specialization", "UniversityID" },
+                values: new object[,]
+                {
+                    { 2, 0.0, "Engineering", 2023, 0, "Computer Science", "Kafr El Shi5" },
+                    { 3, 0.0, "Engineering", 2023, 0, "Mechancial Engineering", "Tanta" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "IntakesTracks",
+                columns: new[] { "IntakeId", "TrackId", "Status" },
+                values: new object[] { 1, 1, "Active" });
+
+            migrationBuilder.InsertData(
+                table: "StdIntakeTrack",
+                columns: new[] { "IntakeId", "StudentId", "TrackId" },
+                values: new object[,]
+                {
+                    { 1, 2, 1 },
+                    { 1, 3, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Supervises",
+                columns: new[] { "InstructorId", "IntakeId", "TrackId" },
+                values: new object[] { 4, 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Attendances_ScheduleId",

@@ -10,7 +10,7 @@ namespace MVC_Attendance.Models
         Employee,
         Admin
     }
-    public abstract class User
+    public class User
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -32,7 +32,7 @@ namespace MVC_Attendance.Models
         public string Phone { get; set; }
         // Properties(Optional)
         [StringLength(maximumLength: 100, MinimumLength = 3)]
-        public string Address { get; set; }
+        public string? Address { get; set; }
         // Role Property is an Enum 
 
         [EnumDataType(typeof(Role))]

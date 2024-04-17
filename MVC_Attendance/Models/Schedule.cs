@@ -6,6 +6,7 @@ namespace MVC_Attendance.Models
     {
         public int Id { get; set; }
         public TimeOnly StartDate { get; set; }
+        public DateOnly Date { get; set; }
         public int TrackId { get; set; }
 
         [ForeignKey(nameof(TrackId))]
