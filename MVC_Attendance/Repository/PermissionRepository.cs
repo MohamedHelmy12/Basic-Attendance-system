@@ -40,7 +40,7 @@ namespace MVC_Attendance.Repository
         {
             DateTime today = DateTime.Now.Date;
             // && DateTime.Compare(today, p.date.ToDateTime(TimeOnly.MinValue)) < 0
-            List<Permission> pending = db.Permissions.Include(p => p.Student).Where(p => p.Status == PermissionStatus.Pending ).ToList();
+            List<Permission> pending = db.Permissions.Include(p => p.Student).Where(p => p.Status == 0 ).ToList();
             pending = pending.Where(p => DateTime.Compare(today, p.date.ToDateTime(TimeOnly.MinValue)) <= 0 ).ToList();
             return pending;
         }

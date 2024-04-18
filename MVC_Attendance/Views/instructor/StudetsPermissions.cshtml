@@ -1,8 +1,9 @@
-﻿@model IEnumerable<Permission>
+﻿@model List<Permission>
 
 @{
     ViewData["Title"] = "StudentsPermissions";
     Layout = "~/Views/Shared/_Layout2.cshtml";
+ 
 }
 
 <div>
@@ -13,8 +14,9 @@
                 <h5 class="card-title">@p.Student.FirstName @p.Student.LastName</h5>
                 <p class="card-text">@p.date </p>
                 <p class="card-text">@p.Type </p>
-                <button class="btn btn-success" onclick="updatePermission(@p.StudentId, '@p.date', 'Approved')">Approve</button>
-                <button class="btn btn-danger" onclick="updatePermission(@p.StudentId, '@p.date', 'Rejected')">Reject</button>
+                <button class="btn btn-success" onclick="updatePermission(@p.StudentId, '@p.date.ToString("dd-MM-yyyy")', 1)">Approve</button>
+                <button class="btn btn-danger" onclick="updatePermission(@p.StudentId, '@p.date.ToString("dd-MM-yyyy")', 2)">Reject</button>
+
             </div>
         </div>
     }
@@ -23,24 +25,36 @@
 <script>
 
     function updatePermission(studentId, date, status) {
-        var requestData = {
-            studentId: studentId,
-            date: date,
-            status: status
-        };
+        // debugger;
+        // var parsedDate = new Date(date);
+        // console.log(parsedDate);
+         console.log(studentId, date, status);
+        // var requestData = {
+        //     studentId: studentId,
+        //     date: date,
+        //     status: status
+        // };
         $.ajax({
             url: '/instructor/UpdatePermission', // URL of the controller action method
-            method: 'POST',
-            contentType: 'application/json', // Set the content type to JSON
-            data: JSON.stringify(requestData), // Convert the permission object to a JSON string
+            data: {
+                studentID: studentId,
+                Date: date,
+                Status: status
+            }, // Convert the permission object to a JSON string
             success: function (response) {
                 // Handle the success response here
                 console.log('Permission received successfully:', response);
+                // Reload the page after successful update
+                location.reload();
             },
-            error: function (xhr, status, error) {
-                // Handle errors here
-                console.error('Failed to receive permission:', error);
-            }
+            // success: function (response) {
+            //     // Handle the success response here
+            //     console.log('Permission received successfully:', response);
+            // },
+            // error: function (xhr, status, error) {
+            //     // Handle errors here
+            //     console.error('Failed to receive permission:', error);
+            // }
         });
     }
 
