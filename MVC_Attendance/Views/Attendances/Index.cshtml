@@ -2,6 +2,9 @@
 
 @{
     // Layout = null;
+    ViewData["Title"] = "Index";
+    // Layout = "~/Views/Shared/_Layout2.cshtml";
+
 }
 
 <!DOCTYPE html>
@@ -12,9 +15,13 @@
     <title>Index</title>
 </head>
 <body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+    @if (ViewBag.Role == "Admin")
+	{
+		<p>
+			<a asp-action="Create">Create New</a>
+		</p>
+	}
+    <div class="row"> 
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -33,7 +40,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.User)
             </th>
-            <th></th>
+            <th>
+                Actions
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -61,19 +70,21 @@
                 @Html.DisplayFor(modelItem => item.LeavingTime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Id)
+                @Html.DisplayFor(modelItem => item.Schedule.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
+                @Html.DisplayFor(modelItem => item.User.FirstName) <text> </text> @Html.DisplayFor(modelItem => item.User.LastName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-eye"></i></a>
+                @if (ViewBag.Role == "Admin")
+                {<text> | </text><a asp-action="Delete" asp-route-id="@item.Id">Delete</a>}
             </td>
         </tr>
 }
     </tbody>
 </table>
+    </div>
 </body>
 </html>

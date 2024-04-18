@@ -1,7 +1,7 @@
 ﻿@model MVC_Attendance.Models.Attendance
 
 @{
-    Layout = null;
+    // Layout = null;
 }
 
 <!DOCTYPE html>
@@ -20,30 +20,30 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+            <div class="form-group d-none">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
             <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
+            <label asp-for="Date" class="control-label"></label>
+                    <input type="date" asp-for="Date" class="form-control" readonly /> @* value="@ViewBag.ScheduleId" /> readonly*@
+            <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="AttendanceTime" class="control-label"></label>
-                <input asp-for="AttendanceTime" class="form-control" />
+                    <input id="AttendanceTimeId" type="time" asp-for="AttendanceTime" class="form-control" />
                 <span asp-validation-for="AttendanceTime" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="LeavingTime" class="control-label"></label>
-                <input asp-for="LeavingTime" class="form-control" />
+                <input id="LeavingTimeId" type="time" asp-for="LeavingTime" class="form-control" />
                 <span asp-validation-for="LeavingTime" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" hidden>
                 <label asp-for="ScheduleId" class="control-label"></label>
                 <select asp-for="ScheduleId" class="form-control" asp-items="ViewBag.ScheduleId"></select>
                 <span asp-validation-for="ScheduleId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
-                <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -59,5 +59,27 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+    <script>
+        // make sure that the AttendanceTime is less than LeavingTime (js)
+        document.getElementById('AttendanceTimeId').addEventListener('change', function () {
+            var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+            var LeavingTime = document.getElementById('LeavingTimeId').value;
+
+            if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+                alert('AttendanceTime should be less than LeavingTime');
+                document.getElementById('AttendanceTimeId').value = '';
+            }
+        });
+        document.getElementById('LeavingTimeId').addEventListener('change', function () {
+            var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+            var LeavingTime = document.getElementById('LeavingTimeId').value;
+            if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+                alert('AttendanceTime should be less than LeavingTime');
+                document.getElementById('LeavingTimeId').value = '';
+            }
+        });
+
+    </script>
+
 </body>
 </html>

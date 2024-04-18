@@ -11,8 +11,8 @@ using System.Security.Claims;
 namespace MVC_Attendance.Controllers
 
 {
-    // [User.Role("Admin")]
-    // [Authorize(Roles = "Instructor")]
+    //[User.Role("Admin")]
+    [Authorize(Roles = "Student,Instructor,Employee,Admin")]
     public class PermissionController : Controller
     {
 		private readonly AttDbContext _context;
@@ -26,9 +26,20 @@ namespace MVC_Attendance.Controllers
 		// GET: PermissionController
 		public ActionResult Index()
         {
-            // var user = User.FindFirst(ClaimTypes.Role).Value;
+            // send the time in view bag
+            ViewBag.TodayDate = DateOnly.FromDateTime(DateTime.Now);
+			// var user = User.FindFirst(ClaimTypes.Role).Value;
 
-            var permissions = _context.Permissions.Include(p => p.Student).ToList();
+			var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            var me = User.FindFirst(ClaimTypes.Email);
+            var myId = _context.Users.FirstOrDefault(u => u.Email == me.Value).Id;
+            var permissions = _context.Permissions.Include(a => a.Student).ToList();
+
+			if (myRole != "Admin")
+            {
+                permissions = permissions.Where(p => p.StudentId == myId).ToList();
+                return View(permissions);
+            }
             return View(permissions);
         }
 
@@ -119,13 +130,13 @@ namespace MVC_Attendance.Controllers
 
         // POST: PermissionController/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StudentId,date,Type,Status,Reason")] Permission permission)
+       // [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit( Permission permission,int? id)
         {
-            if (id != permission.StudentId)
-            {
-                return NotFound();
-            }
+            //if (id != permission.StudentId)
+            //{
+            //    return NotFound();
+            //}
 
             //if (!ModelState.IsValid)
             //{

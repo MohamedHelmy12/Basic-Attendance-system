@@ -4,9 +4,9 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" asp-controller="permission" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input asp-for="StudentId" />
+            <input asp-for="StudentId"/>
             <input asp-for="date" />
             <div class="form-group">
                 <label asp-for="Type" class="control-label"></label>

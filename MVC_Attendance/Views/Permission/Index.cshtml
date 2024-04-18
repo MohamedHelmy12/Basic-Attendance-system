@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<MVC_Attendance.Models.Permission>
 
+	@* display the date from the view bag *@
+	
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -51,9 +53,9 @@
 						@Html.DisplayFor(modelItem => item.Reason)
 					</td>
 					<td>
-						<a asp-action="Edit" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Edit</a> |
-						<a asp-action="Details" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Details</a> |
-						<a asp-action="Delete" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")">Delete</a>
+						<a asp-action="Edit" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")"><i class="fa-solid fa-edit"></i></a> |
+						<a asp-action="Details" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")"><i class="fa-solid fa-info"></i></a> |
+						<a asp-action="Delete" asp-route-id="@item.StudentId" asp-route-date="@item.date.ToString("yyyy-MM-dd")"><i class="fa-solid fa-trash"></i></a>
 					</td>
 				</tr>
 			}

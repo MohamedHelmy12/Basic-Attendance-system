@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Query;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +12,10 @@ using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Controllers
 {
+    [Authorize(Roles = "Student,Instructor,Employee,Admin")]
     public class AttendancesController : Controller
     {
         private readonly AttDbContext _context;
-
         public AttendancesController(AttDbContext context)
         {
             _context = context;
@@ -21,8 +24,17 @@ namespace MVC_Attendance.Controllers
         // GET: Attendances
         public async Task<IActionResult> Index()
         {
-            var attDbContext = _context.Attendances.Include(a => a.Schedule).Include(a => a.User);
-            return View(await attDbContext.ToListAsync());
+            var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            ViewBag.Role = myRole;
+            var me = User.FindFirst(ClaimTypes.Email);
+            var myId = _context.Users.FirstOrDefault(u => u.Email == me.Value).Id;
+            var attDbContext = _context.Attendances.Include(a => a.Schedule).Include(a => a.User).ToList();
+            if (myRole != "Admin")
+            {
+                attDbContext = attDbContext.Where(a => a.UserId == myId).ToList();
+                return View(attDbContext);
+            }
+            return View(attDbContext);
         }
 
         // GET: Attendances/Details/5
@@ -45,9 +57,11 @@ namespace MVC_Attendance.Controllers
             return View(attendance);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Attendances/Create
         public IActionResult Create()
         {
+
             ViewData["ScheduleId"] = new SelectList(_context.Schedules, "Id", "Id");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
@@ -72,6 +86,7 @@ namespace MVC_Attendance.Controllers
         }
 
         // GET: Attendances/Edit/5
+        // [HttpGet("Edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -147,6 +162,7 @@ namespace MVC_Attendance.Controllers
         }
 
         // POST: Attendances/Delete/5
+        [Authorize(Roles="Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
