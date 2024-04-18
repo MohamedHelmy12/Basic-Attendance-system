@@ -13,12 +13,16 @@
       "PackagePath": "staticwebassets\\ExcelStudent\\newUploadBulkStudent .xlsx"
     },
     {
-      "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\ExcelStudent\\~$newUploadBulkStudent .xlsx",
-      "PackagePath": "staticwebassets\\ExcelStudent\\~$newUploadBulkStudent .xlsx"
-    },
-    {
       "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\UploadBulkStudent (3).xlsx",
       "PackagePath": "staticwebassets\\Sheets\\UploadBulkStudent (3).xlsx"
+    },
+    {
+      "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\newfile.xlsx",
+      "PackagePath": "staticwebassets\\Sheets\\newfile.xlsx"
+    },
+    {
+      "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\projectTasks.txt",
+      "PackagePath": "staticwebassets\\Sheets\\projectTasks.txt"
     },
     {
       "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\admin.css",

@@ -43,14 +43,19 @@ namespace MVC_Attendance.Controllers
                 var students = new ExcelMapper("wwwroot\\Sheets\\" + Sheet.FileName).Fetch().Select(s => new Student
                 {
                     Specialization = s.Specialization,
-                    FirstName = s.Name, // Assuming 'Name' in Excel corresponds to 'FirstName' in Student
-                    Password = s.Password,
+                    FirstName = s.FirstName, 
+                    LastName = s.LastName,// Assuming 'Name' in Excel corresponds to 'FirstName' in Student
+                    Password = s.Password.ToString(),
                     Email = s.Email,
-                    Phone = s.Mobile, // Assuming 'Mobile' in Excel corresponds to 'Phone' in User
+                    Phone = s.Phone.ToString(), // Assuming 'Mobile' in Excel corresponds to 'Phone' in User
                     Faculty = s.Faculty,
-                    GraduationYear = s.GraduationYear,
-                    AbsenceDegree = Convert.ToInt32(s.StudentDegree), // Assuming 'StudentDegree' in Excel corresponds to 'StudentDegree' in Student
-                    UniversityID = s.University // Assuming 'University' in Excel corresponds to 'UniversityID' in Student
+                    GraduationYear = Convert.ToInt32(s.GraduationYear),
+                    AbsenceDegree = Convert.ToDouble(s.AbsenceDegree), // Assuming 'StudentDegree' in Excel corresponds to 'StudentDegree' in Student
+                    UniversityID = s.UniversityID,   // Assuming 'University' in Excel corresponds to 'UniversityID' in Student
+                    NumberOfAbsences = Convert.ToInt32(s.NumberOfAbsences),
+                    Address = s.Address,
+                    Role = 0,
+                   
                 }).ToList();
 
                 // Assuming 'studentRepo' is the repository for Student entities
@@ -62,8 +67,10 @@ namespace MVC_Attendance.Controllers
 
 
             }
-            catch
+            catch (Exception ex) { }
             {
+
+
                 ViewBag.reasons = new List<string>
                 {
                     "Duplicate Name",
