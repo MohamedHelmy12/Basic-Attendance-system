@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "c8qrn/OkeXsmWdUXXLR9V21T8xSK7qgAzdZviAYVKlI=",
-=======
   "Hash": "JhEyQFU6gPHNW/fnOTEEqSppZ5QSsK8hBlXj95hn7DY=",
->>>>>>> master
   "Source": "MVC_Attendance",
   "BasePath": "_content/MVC_Attendance",
   "Mode": "Default",
@@ -14,28 +10,17 @@
     {
       "Name": "MVC_Attendance\\wwwroot",
       "Source": "MVC_Attendance",
-<<<<<<< HEAD
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC_Attendance.styles.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC_Attendance.styles.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "MVC_Attendance.styles.css",
       "AssetKind": "All",
@@ -48,15 +33,6 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC_Attendance.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC_Attendance.bundle.scp.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-=======
       "OriginalItemSpec": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC_Attendance.styles.css"
     },
     {
@@ -64,7 +40,6 @@
       "SourceId": "MVC_Attendance",
       "SourceType": "Computed",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "MVC_Attendance.bundle.scp.css",
       "AssetKind": "All",
@@ -77,15 +52,6 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< HEAD
-      "OriginalItemSpec": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC_Attendance.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\css\\admin.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "OriginalItemSpec": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC_Attendance.bundle.scp.css"
     },
     {
@@ -93,7 +59,6 @@
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "css/admin.css",
       "AssetKind": "All",
@@ -109,17 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\admin.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\css\\site.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\css\\site.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -135,12 +93,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\favicon.ico",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\ExcelStudent\\newUploadBulkStudent .xlsx",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
@@ -183,7 +135,6 @@
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -199,17 +150,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\js\\admin.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\admin.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "js/admin.js",
       "AssetKind": "All",
@@ -225,17 +169,10 @@
       "OriginalItemSpec": "wwwroot\\js\\admin.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\js\\site.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\js\\site.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -251,17 +188,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -277,17 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -303,17 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -329,17 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -355,17 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -381,17 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -407,17 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -433,17 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -459,17 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -485,17 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -511,17 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -537,17 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -563,17 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -589,17 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -615,17 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -641,17 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -667,17 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -693,17 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -719,17 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -745,17 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -771,17 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -797,17 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -823,17 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -849,17 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -875,17 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -901,17 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -927,17 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -953,17 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -979,17 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1005,17 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1031,17 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1057,17 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1083,17 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1109,17 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1135,17 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1161,17 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1187,17 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1213,17 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1239,17 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1265,17 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1291,17 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1317,17 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1343,17 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1369,17 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1395,17 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1421,17 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1447,17 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1473,17 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1499,17 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1525,17 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1551,17 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1577,17 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1603,17 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1629,17 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1655,17 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1681,17 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1707,17 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "SourceId": "MVC_Attendance",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\wwwroot\\",
-=======
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "MVC_Attendance",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
->>>>>>> master
       "BasePath": "_content/MVC_Attendance",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
