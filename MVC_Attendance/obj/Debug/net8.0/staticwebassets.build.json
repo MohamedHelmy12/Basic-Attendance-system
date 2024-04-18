@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JhEyQFU6gPHNW/fnOTEEqSppZ5QSsK8hBlXj95hn7DY=",
+  "Hash": "zdA5tSPW+3sGOgCiEe5iqarIfmBXvlzHVlIzCvYDD1k=",
   "Source": "MVC_Attendance",
   "BasePath": "_content/MVC_Attendance",
   "Mode": "Default",
@@ -1269,6 +1269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\MVC-Day8.pdf",
+      "SourceId": "MVC_Attendance",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\",
+      "BasePath": "_content/MVC_Attendance",
+      "RelativePath": "Sheets/MVC-Day8.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Sheets\\MVC-Day8.pdf"
     },
     {
       "Identity": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\newfile.xlsx",
