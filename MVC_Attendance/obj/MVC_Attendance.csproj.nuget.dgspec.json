@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj": {}
+    "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj": {}
   },
   "projects": {
-    "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj": {
+    "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
+        "projectUniqueName": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
         "projectName": "MVC_Attendance",
-        "projectPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\obj\\",
+        "projectPath": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "ExcelMapper": {
+              "target": "Package",
+              "version": "[5.2.581, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -91,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

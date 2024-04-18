@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Add Bulk Students";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="StudentExel" asp-action="AddBulk" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="Sheet">Select Excel File:</label>
+        <input type="file" class="form-control-file" id="Sheet" name="Sheet">
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+
