@@ -8143,19 +8143,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\Elsharkawy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
+      "projectUniqueName": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\MVC_Attendance.csproj",
       "projectName": "MVC_Attendance",
-      "projectPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\MVC_Attendance.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "G:\\ITI\\dotNet\\Project\\Basic-Attendance-system\\MVC_Attendance\\obj\\",
+      "projectPath": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\MVC_Attendance.csproj",
+      "packagesPath": "C:\\Users\\Elsharkawy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elsharkawy\\Desktop\\Basic-Attendance-Time-tracking-System\\MVC_Attendance\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Elsharkawy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
