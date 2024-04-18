@@ -16,9 +16,6 @@
                 <p class="card-text">@p.Type </p>
                 <button class="btn btn-success" onclick="updatePermission(@p.StudentId, '@p.date.ToString("dd-MM-yyyy")', 1)">Approve</button>
                 <button class="btn btn-danger" onclick="updatePermission(@p.StudentId, '@p.date.ToString("dd-MM-yyyy")', 2)">Reject</button>
-                <script>
-                    alert(@p.date)
-                    </script>
 
             </div>
         </div>
@@ -47,11 +44,17 @@
             success: function (response) {
                 // Handle the success response here
                 console.log('Permission received successfully:', response);
+                // Reload the page after successful update
+                location.reload();
             },
-            error: function (xhr, status, error) {
-                // Handle errors here
-                console.error('Failed to receive permission:', error);
-            }
+            // success: function (response) {
+            //     // Handle the success response here
+            //     console.log('Permission received successfully:', response);
+            // },
+            // error: function (xhr, status, error) {
+            //     // Handle errors here
+            //     console.error('Failed to receive permission:', error);
+            // }
         });
     }
 
