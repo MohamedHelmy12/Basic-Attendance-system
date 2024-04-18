@@ -31,6 +31,16 @@ namespace MVC_Attendance.Controllers
         [HttpPost]
         public IActionResult AddBulk(IFormFile Sheet)
         {
+            if (Sheet == null || Sheet.Length == 0)
+            {
+                ViewBag.reasons = new List<string>
+                {
+                    
+                    "Please choose a file to upload."
+                };
+                return View("AdminError");
+
+            }
             using (var fs = new FileStream("wwwroot\\Sheets\\" + Sheet.FileName, FileMode.OpenOrCreate))
             {
                 Sheet.CopyTo(fs);
@@ -73,7 +83,6 @@ namespace MVC_Attendance.Controllers
 
                 ViewBag.reasons = new List<string>
                 {
-                    "Duplicate Name",
                     "Invalid Data",
                     "Invalid file format"
                 };
