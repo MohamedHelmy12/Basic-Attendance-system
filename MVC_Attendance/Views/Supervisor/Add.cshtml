@@ -4,7 +4,6 @@
     ViewData["Title"] = "Add";
 }
 
-
 <h2>Add Supervisor</h2>
 
 <form asp-action="Add" method="post">
@@ -17,6 +16,17 @@
             }
         </select>
     </div>
+
+    <div class="form-group">
+        <label for="intakeId">Select Intake:</label>
+        <select class="form-control" id="intakeId" name="intakeId">
+            @foreach (var intake in Model.Intakes)
+            {
+                <option value="@intake.Id">@intake.Name</option>
+            }
+        </select>
+    </div>
+
     <div class="form-group">
         <label for="trackId">Select Track:</label>
         <select class="form-control" id="trackId" name="trackId">
@@ -26,7 +36,17 @@
             }
         </select>
     </div>
+
+    <!-- Display model errors -->
+    @if (ViewData.ModelState.IsValid == false)
+    {
+        <div class="alert alert-danger" role="alert">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
     <button type="submit" class="btn btn-primary">Add Supervisor</button>
 </form>
-
-

@@ -1,8 +1,9 @@
-﻿using MVC_Attendance.Models;
+﻿using MVC_Attendance.IRepository;
+using MVC_Attendance.Models;
 
 namespace MVC_Attendance.Repository
 {
-    public class IntakeRepository
+    public class IntakeRepository : IIntakeRepository
     {
         AttDbContext db;
         public IntakeRepository(AttDbContext db)
@@ -28,11 +29,6 @@ namespace MVC_Attendance.Repository
             db.SaveChanges();
 
         }
-        public void Delete(int id)
-        {
-            Intake intake = GetById(id);
-            db.Intakes.Remove(intake);
-            db.SaveChanges();
-        }
+
     }
 }

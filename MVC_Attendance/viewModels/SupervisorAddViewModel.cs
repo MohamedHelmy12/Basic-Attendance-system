@@ -6,5 +6,6 @@ namespace MVC_Attendance.viewModels
     {
         public List<Instructor> Instructors { get; set; }
         public List<Track> Tracks { get; set; }
+        public List<Intake> Intakes { get; set; }
     }
 }

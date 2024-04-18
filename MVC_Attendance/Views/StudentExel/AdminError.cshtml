@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Error";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>There was an error processing the Excel file. Possible reasons:</p>
+
+<ul>
+    @foreach (var reason in ViewBag.reasons)
+    {
+        <li>@reason</li>
+    }
+</ul>
+
+<a asp-controller="Home" asp-action="Index">Back to Home</a>
+
+

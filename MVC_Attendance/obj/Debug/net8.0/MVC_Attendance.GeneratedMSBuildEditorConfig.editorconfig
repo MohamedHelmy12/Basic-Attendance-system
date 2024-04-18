@@ -17,159 +17,171 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC_Attendance
 build_property.RootNamespace = MVC_Attendance
-build_property.ProjectDir = C:\Users\Elsharkawy\Desktop\Basic-Attendance-Time-tracking-System\MVC_Attendance\
+build_property.ProjectDir = D:\ITI\.Netcoreشرح\project\final\Basic-Attendance-system\MVC_Attendance\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Elsharkawy\Desktop\Basic-Attendance-Time-tracking-System\MVC_Attendance
+build_property.MSBuildProjectDirectory = D:\ITI\.Netcoreشرح\project\final\Basic-Attendance-system\MVC_Attendance
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Account/Login.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/admin/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Attendances/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Attendances/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Attendances/Delete.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Attendances/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Attendances/Details.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Attendances/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Attendances/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Attendances/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Attendances/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Attendances/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0ZW5kYW5jZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Employee/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Employee/Details.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Employee/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Employee/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Home/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Home/Privacy.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/instructor/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/instructor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5zdHJ1Y3RvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/instructor/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/instructor/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5zdHJ1Y3RvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/instructor/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/instructor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5zdHJ1Y3RvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/instructor/Schedule.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/instructor/Schedule.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5zdHJ1Y3RvclxTY2hlZHVsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/instructor/StudetsPermissions.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/instructor/StudetsPermissions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaW5zdHJ1Y3RvclxTdHVkZXRzUGVybWlzc2lvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Permission/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Permission/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Permission/Delete.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Permission/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Permission/Details.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Permission/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Permission/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Permission/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Permission/Index.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Permission/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Shared/Error.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Shared/_Layout2.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Shared/_Layout2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Student/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/StudentExel/AddBulk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEV4ZWxcQWRkQnVsay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/StudentExel/AdminError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEV4ZWxcQWRtaW5FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/StudentExel/UploadBulkStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudEV4ZWxcVXBsb2FkQnVsa1N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Student/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Student/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Student/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Student/Show.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Student/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Supervisor/Add.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Supervisor/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJ2aXNvclxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Track/Create.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Track/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Track/Edit.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Track/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Track/show.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Track/show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tcc2hvdy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Track/ShowStudents.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Track/ShowStudents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tcU2hvd1N0dWRlbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/_ViewImports.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/_ViewStart.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elsharkawy/Desktop/Basic-Attendance-Time-tracking-System/MVC_Attendance/Views/Shared/_Layout.cshtml]
+[D:/ITI/.Netcoreشرح/project/final/Basic-Attendance-system/MVC_Attendance/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-arm0pi6ztn

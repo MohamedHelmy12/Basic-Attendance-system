@@ -27,6 +27,7 @@ namespace MVC_Attendance
             builder.Services.AddScoped < IAttendanceRepository, AttendanceRepository >();
             builder.Services.AddScoped < IEmployeeRepository, EmployeeRepository >();
             builder.Services.AddScoped< ISuperviseRepository, SuperviseRepository >();
+            builder.Services.AddScoped<IIntakeRepository, IntakeRepository>();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
             {
