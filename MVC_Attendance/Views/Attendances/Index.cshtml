@@ -1,9 +1,9 @@
-﻿@model IEnumerable<MVC_Attendance.Models.Attendance>
+﻿@model IEnumerable<MVC_Attendance.ViewModels.Attend>
 
 @{
-    // Layout = null;
-    ViewData["Title"] = "Index";
-    // Layout = "~/Views/Shared/_Layout2.cshtml";
+	// Layout = null;
+	ViewData["Title"] = "Index";
+	// Layout = "~/Views/Shared/_Layout2.cshtml";
 
 }
 
@@ -11,80 +11,155 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<style>
+		.Present {
+			color: green;
+		}
+
+		.Absent {
+			color: red;
+		}
+
+		.Comming {
+			color: blue;
+		}
+	</style>
 </head>
 <body>
-    @if (ViewBag.Role == "Admin")
+	<!-- Create table for abcence degree and number of abcent dayes
+		using the view bag ViewBag.User 
+
+	ViewBag.User.
+	-->
+	<div class="row">
+		<p>
+			The absence degree is calculated based on the number of times a student has been absent. 
+			For the first 5 absences, each absence contributes 5 points to the absence degree. 
+			If the student is absent more than 5 times but fewer than 10, each absence counts as 10 points. 
+			For 10 or more absences, each absence counts as 25 points towards the student's absence degree. 
+			This system is designed to monitor and manage attendance proactively.
+		</p>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>
+						User Name 
+					</th>
+					<th>
+						Number of Present Days
+					</th>
+					<th>
+						Number of Absent Days
+					</th>
+					<th>
+						Absence Degree
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in ViewBag.ourStuds)
+				{
+					<tr>
+						<td>
+							@item.FirstName <text> </text> @item.LastName
+						</td>
+						<td>
+							@item.Presentdayes
+						</td>
+						<td>
+							@item.Abcencedayes
+						</td>
+						<td>
+							@item.AbsenceDegree
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	</div>
+
+	@if (ViewBag.Role == "Admin")
 	{
 		<p>
 			<a asp-action="Create">Create New</a>
 		</p>
 	}
-    <div class="row"> 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendanceTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LeavingTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Schedule)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th>
-                Actions
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model.Count() == 0)
-		{
-			<tr>
-				<td colspan="6">No data found</td>
-			</tr>
-		}
-		else
-		{
-			<tr>
-				<td colspan="6">Total records: @Model.Count()</td>
-			</tr>
-		}
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttendanceTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LeavingTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.FirstName) <text> </text> @Html.DisplayFor(modelItem => item.User.LastName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
-                <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-eye"></i></a>
-                @if (ViewBag.Role == "Admin")
-                {<text> | </text><a asp-action="Delete" asp-route-id="@item.Id">Delete</a>}
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
-    </div>
+	<div class="row">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model.Schedule)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.User)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.AttendanceTime)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.LeavingTime)
+					</th>
+					<th>
+						Actions
+					</th>
+					<th>
+						Status
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model.Count() == 0)
+				{
+					<tr>
+						<td colspan="6">No data found</td>
+					</tr>
+				}
+				else
+				{
+					<tr>
+						<td colspan="6">Total records: @Model.Count()</td>
+					</tr>
+				}
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.Schedule.Date)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.User.FirstName) <text> </text> @Html.DisplayFor(modelItem => item.User.LastName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.AttendanceTime)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.LeavingTime)
+						</td>
+						<td>
+							@if (ViewBag.Role == "Admin")
+							{
+							<a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+								<text> | </text>
+							}
+							<a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-eye"></i></a>
+							@if (ViewBag.Role == "Admin")
+							{
+								<text> | </text>
+
+								<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+							}
+						</td>
+						<td class="@item.Status">
+							@Html.DisplayFor(modelItem => item.Status)
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
