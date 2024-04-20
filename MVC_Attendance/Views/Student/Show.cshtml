@@ -5,122 +5,86 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<div class="col-6">
-    <a asp-action="Create">Create New</a>
-</p>
-
-<div>
-    <input type="text" id="searchInput" placeholder="Search by email...">
-    <button id="searchButton">Search</button>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Student Data</h2>
+                </div>
+                <div class="card-body">
+                    <div class="col-12 mb-3">
+                        <a asp-action="Create" class="btn btn-primary">Add Student</a>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search by email...">
+                    </div>
+                    <div class="table-responsive">
+                        <table id="studentTable" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Html.DisplayNameFor(model => model.Student.Specialization)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.FirstName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.LastName)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.Email)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.Password)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.Phone)</th>
+                                    <th>@Html.DisplayNameFor(model => model.Student.Address)</th>
+                                    <th>@Html.DisplayNameFor(model => model.StdIntakeTrack.Intake)</th>
+                                    <th>@Html.DisplayNameFor(model => model.StdIntakeTrack.Track)</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentTableBody">
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.Specialization)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.FirstName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.LastName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.Email)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.Password)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.Phone)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.Student.Address)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.StdIntakeTrack.Intake)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.StdIntakeTrack.Track)</td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Student.Id" class="btn btn-primary">Edit</a>
+                                            <a asp-action="Details" asp-route-id="@item.Student.Id" class="btn btn-info">Details</a>
+                                            <a asp-action="Delete" asp-route-id="@item.Student.Id" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center" id="paginationContainer">
+                        <!-- Pagination buttons will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<table id="studentTable" class="table table-responsive">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.UniversityID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Faculty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Specialization)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.GraduationYear)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Student.Address)
-            </th>
-            <th>
-                @* @Html.DisplayNameFor(model => model.Role) *@
-                @Html.DisplayNameFor(model => model.StdIntakeTrack.Intake)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StdIntakeTrack.Track)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody id="studentTableBody">
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.UniversityID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Faculty)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Specialization)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.GraduationYear)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Password)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Phone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Student.Address)
-                </td>
-                <td>
-                    @* @Html.DisplayFor(modelItem => item.Student.Role) *@
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StdIntakeTrack.Intake)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StdIntakeTrack.Track)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Student.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Student.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Student.Id" onclick="return confirm('Are you sure?')">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<div class="text-center" id="paginationContainer">
-    <!-- Pagination buttons will be inserted here -->
-</div>
-</div>
     <script>
         $(document).ready(function () {
-            $("#searchButton").click(function () {
-                var searchText = $("#searchInput").val().toLowerCase();
-                $("#studentTableBody tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+            $("#searchInput").keyup(function () {
+                var searchText = $(this).val().toLowerCase();
+                var $tableRows = $("#studentTableBody tr");
+                var $visibleRows = $tableRows.filter(function () {
+                    var rowText = $(this).text().toLowerCase();
+                    return rowText.indexOf(searchText) > -1;
                 });
+
+                $tableRows.hide(); // Hide all rows initially
+
+                if ($visibleRows.length > 0) {
+                    $visibleRows.show(); // Show matching rows
+                } else {
+                    // Show "not found" message if no matching rows found
+                    $("#notFoundMessage").show();
+                }
             });
 
             // Pagination
@@ -135,5 +99,6 @@
 
             $('#paginationContainer').append($('#studentTable_paginate'));
         });
+
     </script>
 
