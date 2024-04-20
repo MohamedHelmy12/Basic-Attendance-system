@@ -1,0 +1,81 @@
+﻿@model MVC_Attendance.Models.Attendance
+
+@{
+    // Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>Attendance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input type="date" asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttendanceTime" class="control-label"></label>
+                <input id="AttendanceTimeId" type="time" asp-for="AttendanceTime" class="form-control" />
+                <span asp-validation-for="AttendanceTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeavingTime" class="control-label"></label>
+                    <input id="LeavingTimeId" type="time" asp-for="LeavingTime" class="form-control" />
+                <span asp-validation-for="LeavingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScheduleId" class="control-label"></label>
+                    <select asp-for="ScheduleId" class="form-control" asp-items="ViewBag.ScheduleId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                    <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+        // make sure that the AttendanceTime is less than LeavingTime (js)
+    document.getElementById('AttendanceTimeId').addEventListener('change', function() {
+		var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+		var LeavingTime = document.getElementById('LeavingTimeId').value;
+        
+		if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+			alert('AttendanceTime should be less than LeavingTime');
+			document.getElementById('AttendanceTimeId').value = '';
+		}
+	});
+    document.getElementById('LeavingTimeId').addEventListener('change', function() {
+		var AttendanceTime = document.getElementById('AttendanceTimeId').value;
+		var LeavingTime = document.getElementById('LeavingTimeId').value;
+        if (AttendanceTime > LeavingTime && LeavingTime != 0) {
+		alert('AttendanceTime should be less than LeavingTime');
+		document.getElementById('LeavingTimeId').value = '';
+		}
+	});
+
+</script>
+</body>
+</html>

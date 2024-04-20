@@ -27,13 +27,13 @@ namespace MVC_Attendance
             builder.Services.AddScoped < IAttendanceRepository, AttendanceRepository >();
             builder.Services.AddScoped < IEmployeeRepository, EmployeeRepository >();
             builder.Services.AddScoped< ISuperviseRepository, SuperviseRepository >();
+            builder.Services.AddScoped<IIntakeRepository, IntakeRepository>();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
                 options.AccessDeniedPath = "/Account/AccessDenied";
             });
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -49,7 +49,8 @@ namespace MVC_Attendance
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                // pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Login}");
 
             app.Run();
         }

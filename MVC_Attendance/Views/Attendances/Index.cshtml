@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MVC_Attendance.Models.Attendance>
+
+@{
+    // Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendanceTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeavingTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+		{
+			<tr>
+				<td colspan="6">No data found</td>
+			</tr>
+		}
+		else
+		{
+			<tr>
+				<td colspan="6">Total records: @Model.Count()</td>
+			</tr>
+		}
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttendanceTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeavingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Schedule.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

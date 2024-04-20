@@ -12,5 +12,6 @@ namespace MVC_Attendance.IRepository
         void UpdateStudent(Student student);
         void DeleteStudent(int id);
         List<Student> GetStudentsByTrackId(int trackId);
+        public void AddRangeOfStudents(IEnumerable<Student> students);
     }
 }

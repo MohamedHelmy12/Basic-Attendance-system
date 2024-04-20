@@ -40,16 +40,17 @@ namespace MVC_Attendance.Controllers
         public IActionResult StudetsPermissions(int insId = 3)
         {
             List<Permission> permissions = permissionRepository.GetSupervisorStudentsPermissions(insId);
-            
+    
             return View(permissions);
         }
 
-        public IActionResult UpdatePermission(int studentId, string date, PermissionStatus status)
-        {
-            DateOnly ddate = DateOnly.Parse(date);
-            var permission = permissionRepository.GetPermission(studentId, ddate);
+        //[HttpPost]
+        public IActionResult UpdatePermission(int studentID, string Date, PermissionStatus Status)
+        {   
+            DateOnly date = DateOnly.Parse(Date);
+            var permission = permissionRepository.GetPermission(studentID, date);
             
-            permissionRepository.UpdatePermission(permission, status);
+            permissionRepository.UpdatePermission(permission, Status);
             return Content("Success");
         }
         [HttpGet]

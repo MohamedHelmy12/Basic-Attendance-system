@@ -64,6 +64,12 @@ namespace MVC_Attendance.Repository
 
             return studentsInTrack;
         }
+
+        public void AddRangeOfStudents(IEnumerable<Student> students)
+        {
+            db.Students.AddRange(students);
+            db.SaveChanges();
+        }
     }
 }
 
