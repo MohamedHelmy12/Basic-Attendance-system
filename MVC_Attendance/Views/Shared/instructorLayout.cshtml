@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+@{
+
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -55,22 +60,48 @@
                     </div>
 
                     <div class="menu_items">
-                        <ul class="menu_item">
-                            <br />
-                            <hr />
-                            <li class="item">
-                                <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
-                                    <i class="bx bx-user"></i>
-                                    <span>Permissions</span>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="@Url.Action("Schedule", "Instructor")" class="link flex">
-                                    <i class="bx bx-user"></i>
-                                    <span>Schedule</span>
-                                </a>
-                            </li>
-                        </ul>
+                        @{
+                            var supervisorClaim = User.FindFirst("supervisor");
+                            if (supervisorClaim != null && supervisorClaim.Value == "yes")
+                            {
+                                <ul class="menu_item">
+                                    <br />
+                                    <hr />
+                                    <li class="item">
+                                        <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
+                                            <i class="bx bx-user"></i>
+                                            <span>Permissions</span>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="@Url.Action("Schedule", "Instructor")" class="link flex">
+                                            <i class="bx bx-user"></i>
+                                            <span>Schedule</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            }
+                        }
+                        @* @if (User.Identity.supervisor == "yes")
+                        {
+                            <ul class="menu_item">
+                                <br />
+                                <hr />
+                                <li class="item">
+                                    <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
+                                        <i class="bx bx-user"></i>
+                                        <span>Permissions</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="@Url.Action("Schedule", "Instructor")" class="link flex">
+                                        <i class="bx bx-user"></i>
+                                        <span>Schedule</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        } *@
+                        
                     </div>
                     <div class="sidebar_profile flex">
                         <div class="data_text">

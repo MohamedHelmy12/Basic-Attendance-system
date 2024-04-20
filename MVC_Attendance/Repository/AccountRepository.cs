@@ -9,9 +9,11 @@ namespace MVC_Attendance.Repository
     public class AccountRepository : IAccountRepository
     {
         private readonly AttDbContext db;
-        public AccountRepository(AttDbContext _db)
+        private readonly IInstructorRepository instructorRepository;
+        public AccountRepository(AttDbContext _db, IInstructorRepository _instructorRepository)
         { 
             db = _db;
+            instructorRepository = _instructorRepository;
         }
 
         public ClaimsPrincipal AddUserAuthentication(User userLogin)
@@ -20,6 +22,25 @@ namespace MVC_Attendance.Repository
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
             Claim userEmail = new Claim(ClaimTypes.Email, userLogin.Email);
             Claim userName = new Claim(ClaimTypes.Name, userLogin.FirstName + " " + userLogin.LastName);
+            if(userLogin.Role == Models.Role.Instructor)
+            {
+                Claim isSupervisor;
+                Claim customClaim;
+                
+                if (instructorRepository.GetSupervisionInfo(userLogin.Id) ==  null)
+                {
+                     isSupervisor = new Claim(ClaimTypes.Actor, "notSupervisor");
+                     customClaim = new Claim("supervisor", "no");
+                }
+                else
+                {
+                     isSupervisor = new Claim(ClaimTypes.Actor, "supervisor");
+                     customClaim = new Claim("supervisor", "yes");
+                }
+                claimsIdentity.AddClaim(isSupervisor);
+                claimsIdentity.AddClaim(customClaim);
+
+            }
 
             Claim Role = new Claim(ClaimTypes.Role, userLogin.Role.ToString());
             claimsIdentity.AddClaim(userEmail);
