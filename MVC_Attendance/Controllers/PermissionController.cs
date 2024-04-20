@@ -12,34 +12,45 @@ namespace MVC_Attendance.Controllers
 
 {
     //[User.Role("Admin")]
-    [Authorize(Roles = "Student,Instructor,Employee,Admin")]
+    [Authorize(Roles = "Student,Instructor,Admin")]
     public class PermissionController : Controller
     {
-		private readonly AttDbContext _context;
+        private readonly AttDbContext _context;
 
 
         public PermissionController(AttDbContext context)
         {
-			_context = context;
-		}
+            _context = context;
+        }
 
-		// GET: PermissionController
-		public ActionResult Index()
+        // GET: PermissionController
+        public ActionResult Index()
         {
             // send the time in view bag
             ViewBag.TodayDate = DateOnly.FromDateTime(DateTime.Now);
-			// var user = User.FindFirst(ClaimTypes.Role).Value;
 
-			var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            // send the role in view bag
+            var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            ViewBag.Role = myRole;
+
             var me = User.FindFirst(ClaimTypes.Email);
             var myId = _context.Users.FirstOrDefault(u => u.Email == me.Value).Id;
             var permissions = _context.Permissions.Include(a => a.Student).ToList();
+            var Schedules = _context.Schedules.Include(a => a.Attendances).ToList();
 
-			if (myRole != "Admin")
+            if (myRole == "Student")
             {
+                var myTrackId = _context.StdIntakeTrack.FirstOrDefault(u => u.StudentId == myId).TrackId;
+                ViewBag.SchedulesDates = Schedules.Where(a => a.TrackId == myTrackId).Select(a => a.Date).ToList();
+            }
+
+            if (myRole != "Admin")
+            {
+
                 permissions = permissions.Where(p => p.StudentId == myId).ToList();
                 return View(permissions);
             }
+            ViewBag.SchedulesDates = Schedules.Select(a => a.Date).ToList();
             return View(permissions);
         }
 
@@ -63,6 +74,18 @@ namespace MVC_Attendance.Controllers
         // GET: PermissionController/Create
         public async Task<ActionResult> Create()
         {
+            // send the time in view bag
+            //ViewBag.TodayDate = DateOnly.FromDateTime(DateTime.Now);
+
+            // send the role in view bag
+            var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            ViewBag.Role = myRole;
+
+            var me = User.FindFirst(ClaimTypes.Email);
+            var myId = _context.Users.FirstOrDefault(u => u.Email == me.Value).Id;
+            ViewBag.myId = myId;
+
+
             // calling GetStudents method to get list of students
             var students = await _context.Students.ToListAsync();
             ViewBag.Students = students.Select(s => new SelectListItem
@@ -74,8 +97,28 @@ namespace MVC_Attendance.Controllers
             ViewBag.PermissionTypes = GetPermissionTypes();
             ViewBag.StatusTypes = GetStatusTypes();
 
-            
+            //var permissions = _context.Permissions.Include(a => a.Student).ToList();
+            var Schedules = _context.Schedules.Include(a => a.Attendances).ToList();
 
+            if (myRole == "Student")
+            {
+                var myTrackId = _context.StdIntakeTrack.FirstOrDefault(u => u.StudentId == myId).TrackId;
+                ViewBag.SchedulesDates = Schedules.Where(a => a.TrackId == myTrackId).Select(a => new SelectListItem
+                {
+                    Value = a.Date.ToString(),
+                    Text = a.Date.ToString()
+                });
+            }
+
+            ViewBag.SchedulesDates = Schedules.Select(a => new SelectListItem
+            {
+                Value = a.Date.ToString(),
+                Text = a.Date.ToString()
+            });
+
+            //ViewData["SchedulesDates"] = new SelectList(
+            //    _context.Users.Select(s => new { Id = s.Id, DisplayText = $"{s.FirstName} {s.LastName}" })
+            //    , "Id", "DisplayText");
             return View();
         }
         [HttpPost]
@@ -85,9 +128,9 @@ namespace MVC_Attendance.Controllers
             // check if the values are of Studeent Id and date are already exist using the PermissionExists method
             if (PermissionExists(int.Parse(collection["StudentId"]), DateOnly.Parse(collection["date"])))
             {
-				// message box to show the error message
-				ModelState.AddModelError(string.Empty, "Permission already exists for this student and date.");
-			}
+                // message box to show the error message
+                ModelState.AddModelError(string.Empty, "Permission already exists for this student and date.");
+            }
             try
             {
 
@@ -114,7 +157,12 @@ namespace MVC_Attendance.Controllers
         // GET: PermissionController/Edit/5
         public async Task<IActionResult> Edit(int id, DateOnly date)
         {
-            var permission = await _context.Permissions
+			// send the role in view bag
+			var myRole = User.FindFirst(ClaimTypes.Role).Value;
+			ViewBag.Role = myRole;
+
+
+			var permission = await _context.Permissions
                 .Include(p => p.Student)
                 .FirstOrDefaultAsync(p => p.StudentId == id && p.date == date);
 
@@ -125,14 +173,22 @@ namespace MVC_Attendance.Controllers
 
             ViewBag.PermissionTypes = GetPermissionTypes();
             ViewBag.StatusTypes = GetStatusTypes();
+
             return View(permission);
         }
 
         // POST: PermissionController/Edit/5
         [HttpPost]
-       // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit( Permission permission,int? id)
+        // [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Permission permission, int? id)
         {
+            // send the time in view bag
+            ViewBag.TodayDate = DateOnly.FromDateTime(DateTime.Now);
+
+            // send the role in view bag
+            var myRole = User.FindFirst(ClaimTypes.Role).Value;
+            ViewBag.Role = myRole;
+
             //if (id != permission.StudentId)
             //{
             //    return NotFound();
@@ -173,22 +229,41 @@ namespace MVC_Attendance.Controllers
                 return NotFound();
             }
 
+            // if permssion date is greater than current date or the permission is not approved (denied) then permission can not be deleted
+            if (permission.date > DateOnly.FromDateTime(DateTime.Now))
+            {
+                ModelState.AddModelError(string.Empty, "Cannot delete passed permissions.");
+                return View(permission);
+            }
+
+            if (permission.Status == PermissionStatus.Rejected)
+            {
+                ModelState.AddModelError(string.Empty, "Cannot delete denied permissions.");
+                return View(permission);
+            }
+
             return View(permission);
         }
 
         // POST: PermissionController/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id, DateOnly date)
+        public async Task<IActionResult> DeleteConfirmed(int StudentId, DateOnly date)
         {
             try
             {
                 // Find permission by student id
-                var permission = _context.Permissions.FirstOrDefault(p => p.StudentId == id && p.date == date);
+                var permission = _context.Permissions.FirstOrDefault(p => p.StudentId == StudentId && p.date == date);
                 if (permission == null)
                 {
                     return NotFound();
                 }
+
+                //if (permission.date > DateOnly.FromDateTime(DateTime.Now))
+                //{
+                //    ModelState.AddModelError(string.Empty, "Cannot delete passed permissions.");
+                //    return View(permission);
+                //}
 
                 // Remove and save changes
                 _context.Permissions.Remove(permission);

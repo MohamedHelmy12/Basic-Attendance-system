@@ -6,8 +6,8 @@
     <div class="col-md-4">
         <form asp-action="Edit" asp-controller="permission" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input asp-for="StudentId"/>
-            <input asp-for="date" />
+            <input asp-for="StudentId" hidden/>
+            <input asp-for="date" hidden/>
             <div class="form-group">
                 <label asp-for="Type" class="control-label"></label>
                 <select asp-for="Type" class="form-control" asp-items="@ViewBag.PermissionTypes">
@@ -15,6 +15,8 @@
                 </select>
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
+            @if (ViewBag.Role != "Student")
+            {
             <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
                 <select asp-for="Status" class="form-control" asp-items="@ViewBag.StatusTypes">
@@ -22,6 +24,8 @@
                 </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
+            }
+
             <div class="from-group">
                 <label asp-for="Reason" class="control-label"></label>
                 <input asp-for="Reason" class="form-control" value="@Model.Reason" />

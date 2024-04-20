@@ -1,33 +1,31 @@
 ﻿@model IEnumerable<MVC_Attendance.Models.Permission>
+@* display the date from the view bag *@
 
-	@* display the date from the view bag *@
-	
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+<p><a asp-action="Create">Create New</a></p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Student)
-            </th>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Student)
+			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.date)
 			</th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
+			<th>
+				@Html.DisplayNameFor(model => model.Type)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Status)
+			</th>
 			<th>
 				@Html.DisplayNameFor(model => model.Reason)
 			</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(Model == null)
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model == null)
 		{
 			<tr>
 				<td colspan="6">No data found</td>
@@ -35,7 +33,8 @@
 		}
 		else
 		{
-			@foreach (var item in Model) {
+			@foreach (var item in Model)
+			{
 				<tr>
 					<td>
 						@Html.DisplayFor(modelItem => item.Student.FirstName)
@@ -59,10 +58,18 @@
 					</td>
 				</tr>
 			}
-		})
-    </tbody>
+			@if (Model.Count() < 1)
+			{
+				<tr>
+					<td class="text-center" colspan="6">No data found</td>
+				</tr>
+			}
+		}
+	</tbody>
 </table>
 
 @section Scripts {
-	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }

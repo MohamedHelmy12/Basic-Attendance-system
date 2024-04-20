@@ -29,7 +29,16 @@ namespace MVC_Attendance.Repository
 
         public User GetUserAuth(UserLoginModelView userLogin)
         {
-            return db.Users.FirstOrDefault(u => u.Email == userLogin.Email && u.Password == userLogin.Password);
+            // adding try and catch 
+            try
+            {
+                var mydbUsers = db.Users.ToList();
+                return db.Users.FirstOrDefault(u => u.Email == userLogin.Email && u.Password == userLogin.Password);
+            } catch
+            {
+                return null;
+            }
+
         }
         public void AddUser(UserRegisterModelView userRegister)
         {
