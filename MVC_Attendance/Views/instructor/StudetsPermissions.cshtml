@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "StudentsPermissions";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = "~/Views/Shared/instructorLayout.cshtml";
  
 }
 
@@ -53,14 +53,7 @@
                 // Reload the page after successful update
                 location.reload();
             },
-            // success: function (response) {
-            //     // Handle the success response here
-            //     console.log('Permission received successfully:', response);
-            // },
-            // error: function (xhr, status, error) {
-            //     // Handle errors here
-            //     console.error('Failed to receive permission:', error);
-            // }
+
         });
     }
 
