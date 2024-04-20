@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
+    Layout = "~/Views/Shared/instructorLayout.cshtml";
 }
 
 <div class="container">
@@ -13,14 +13,6 @@
                     <h2 class="text-center">Instructor Data</h2>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <a asp-action="Create" class="btn btn-info">Add Instructor</a>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <input type="text" id="searchInput" class="form-control" placeholder="Search by email...">
-                        </div>
-                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <thead class="thead-dark">
@@ -46,7 +38,7 @@
                                         <td>@Html.DisplayFor(modelItem => item.Address)</td>
                                         <td>
                                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
-                                            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
+                         
                                         </td>
                                     </tr>
                                 }

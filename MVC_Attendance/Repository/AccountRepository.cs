@@ -19,11 +19,12 @@ namespace MVC_Attendance.Repository
             ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal();
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
             Claim userEmail = new Claim(ClaimTypes.Email, userLogin.Email);
-            Claim userName = new Claim(ClaimTypes.Name, userLogin.FirstName + userLogin.LastName);
+            Claim userName = new Claim(ClaimTypes.Name, userLogin.FirstName + " " + userLogin.LastName);
 
             Claim Role = new Claim(ClaimTypes.Role, userLogin.Role.ToString());
             claimsIdentity.AddClaim(userEmail);
             claimsIdentity.AddClaim(Role);
+            claimsIdentity.AddClaim(userName);
             claimsPrincipal.AddIdentity(claimsIdentity);
             return claimsPrincipal;
         }
