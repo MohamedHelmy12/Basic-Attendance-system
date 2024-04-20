@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Basic_Attendance_Time_tracking_System.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xrXaBdaTXwd7uLaW66jUxVlAXYq3gIdhLk9A9CrXoaZJkBGM6KGdHaSKKXv4+8+XvTD8vzTVNa3jdWaw0THP5Q==" crossorigin="anonymous" />
+    <title>@ViewBag.Title</title>
+    <!-- Boxicons CSS -->
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+        .items-position {
+            margin-left: 130px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .schedule-header {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .table-rounded {
+            border-radius: 10px;
+        }
+
+        .bg-dark-red {
+            background-color: darkred;
+        }
+
+            .bg-dark-red th {
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <!-- Sidebar -->
+                <nav class="sidebar locked">
+                    <div class="logo_items flex">
+                        <span class="nav_image">
+                            <i class="fas fa-school"></i>
+                        </span>
+                        <span class="logo_name">Attendance System</span>
+                        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+                        <i class="bx bx-x" id="sidebar-close"></i>
+
+                    </div>
+
+                    <div class="menu_items">
+                        <ul class="menu_item">
+                            <br />
+                            <hr />
+                            <li class="item">
+                                <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
+                                    <i class="bx bx-user"></i>
+                                    <span>Permissions</span>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="@Url.Action("Schedule", "Instructor")" class="link flex">
+                                    <i class="bx bx-user"></i>
+                                    <span>Schedule</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar_profile flex">
+                        <div class="data_text">
+                            <span class="name">@User.Identity.Name</span>
+                        </div>
+                    </div>
+            </div>
+            </nav>
+        </div>
+
+        <div class="container container-fluid offset-1">
+            <div class="col-12">
+                <div class="row">
+                    <!-- Render the content based on user role -->
+                    @if (User.IsInRole("Student"))
+                    {
+                        <!-- Student-specific content -->
+                        @RenderSection("scripts", required: false)
+                        @RenderBody()
+
+                    }
+                    else if (User.IsInRole("Instructor"))
+                    {
+                        <!-- Instructor-specific content -->
+                        @RenderBody()
+                    }
+                    else
+                    {
+                        <!-- Default content for other users -->
+                        @RenderBody()
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/admin.js" defer></script> <!-- Include your admin.js script here -->
+</body>
+</html>
+
+
+@RenderSection("scripts", required: false)
