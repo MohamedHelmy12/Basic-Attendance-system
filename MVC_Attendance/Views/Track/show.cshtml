@@ -2,61 +2,83 @@
     ViewData["Title"] = "Show";
     List<Supervise> supervises = ViewData["Supervises"] as List<Supervise>;
     List<Instructor> instructors = ViewData["instructors"] as List<Instructor>;
-    
 }
 
 @model List<MVC_Attendance.Models.Track>
 
-<h2>Tracks</h2>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">@ViewBag.Title</h2>
+                </div>
+                <div class="card-body">
+                    <div class="col-12 mb-3">
+                        <a asp-action="Create" asp-controller="Track" class="btn btn-primary mb-3">Create Track</a>
+                    </div>
 
-<a asp-action="Create" asp-controller="Track">Create Track</a>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Supervisor</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var track in Model)
+                                    {
+                                        <tr>
+                                            <td>@track.Id</td>
+                                            <td>@track.Name</td>
+                                            <td>
+                                                @if (supervises != null && supervises.Count > 0)
+                                                {
+                                                    var supervisor = supervises.FirstOrDefault(s => s.TrackId == track.Id && s.IntakeId == 1);
+                                                    if (supervisor != null)
+                                                    {
+                                                        @supervisor.Instructor.FirstName @supervisor.Instructor.LastName
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>No Supervisor</span>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <span>No Supervisor</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-action="Edit" asp-controller="Track" asp-route-id="@track.Id" class="btn btn-primary">Edit</a>
+                                                <a asp-action="Delete" asp-controller="Track" asp-route-id="@track.Id" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
+                                                <a asp-action="ShowStudents" asp-controller="Track" asp-route-id="@track.Id" class="btn btn-info">Show Students</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p>No tracks available.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-@if (Model != null && Model.Count > 0)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Supervisor</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var track in Model)
-            {
-                <tr>
-                    <td>@track.Id</td>
-                    <td>@track.Name</td>
-                    <td>
-                        @if (supervises != null && supervises.Count > 0)
-                        {
-                            var supervisor = supervises.FirstOrDefault(s => s.TrackId == track.Id && s.IntakeId==1);
-                            if (supervisor != null)
-                            {
-                                @supervisor.Instructor.FirstName @supervisor.Instructor.LastName
-                            }
-                            else
-                            {
-                                <span>No Supervisor</span>
-                            }
-                        }
-                        else
-                        {
-                            <span>No Supervisor</span>
-                        }
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-controller="Track" asp-route-id="@track.Id">Edit</a> |
-                        <a asp-action="Delete" asp-controller="Track" asp-route-id="@track.Id">Delete</a> |
-                        <a asp-action="ShowStudents" asp-controller="Track" asp-route-id="@track.Id">Show Students</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>No tracks available.</p>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+           
+        });
+    </script>
 }

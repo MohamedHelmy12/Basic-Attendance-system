@@ -5,33 +5,46 @@
     List<Instructor> instructors = ViewData["instructors"] as List<Instructor>;
 }
 
-<h2>Supervisor Index</h2>
+<h2>Supervisor Data</h2>
 
-<p>
-    <a asp-action="Add">Add New Supervisor</a>
-</p>
+<
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Track</th>
-           
-            <th>Supervisor</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var supervise in Model)
-        {
-            <tr>
-                <td>@supervise.Track.Name</td>
-
-                <td>@supervise.Instructor.FirstName @supervise.Instructor.LastName</td>
-                <td>
-                    <a asp-action="Edit" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Edit</a> |
-                    <a asp-action="Delete" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">@ViewData["Title"]</h3>
+                </div>
+                <div class="card-body">
+                    <div class="card-body">
+                        <div class="col-12 mb-3">
+                            <a asp-action="Add" class="btn btn-primary">Add Supervisor</a>
+                        </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Track</th>
+                                <th>Supervisor</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var supervise in Model)
+                            {
+                                <tr>
+                                    <td>@supervise.Track.Name</td>
+                                    <td>@supervise.Instructor.FirstName @supervise.Instructor.LastName</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId" class="btn btn-primary">Edit</a>
+                                            <a asp-action="Delete" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
