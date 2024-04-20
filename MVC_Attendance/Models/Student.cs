@@ -1,30 +1,34 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVC_Attendance.Models
 {
-    /// <summary>
-    /// Student Model
-    /// Student Class inherits from User class
-    /// Student class has the following properties:
-    /// - StudentID: int (Primary Key) (Identity) (Required) (Unique) (Auto Generated) (Read Only)
-    /// - UniversityID: string
-    /// - Faculty: string
-    /// - Specialization: string
-    /// - GraduationYear: int
-    /// - Grade: double
-    /// - NumberOfAbsences: int
-    /// </summary>
     public class Student : User
     {
-        // Properties 
-        //public int StudentID { get; }
+        [Required(ErrorMessage = "University ID is required.")]
         public string UniversityID { get; set; }
-        public string Faculty { get; set; }
-        public string Specialization { get; set; }
-        public int? GraduationYear { get; set; }
-        public double AbsenceDegree { get; set; }
-        public int NumberOfAbsences { get; set; }
-        public virtual ICollection<Permission> Permissions { get; set; } = new List<Permission>();
 
+        [Required(ErrorMessage = "Faculty is required.")]
+        public string Faculty { get; set; }
+
+        [Required(ErrorMessage = "Specialization is required.")]
+        public string Specialization { get; set; }
+
+        [Display(Name = "Graduation Year")]
+        [Range(1900, int.MaxValue, ErrorMessage = "Please enter a valid graduation year.")]
+        public int? GraduationYear { get; set; }
+
+        [Display(Name = "Absence Degree")]
+        [Range(0, 100, ErrorMessage = "Please enter a value between 0 and 100.")]
+        public double AbsenceDegree { get; set; }
+
+        [Display(Name = "Number of Absences")]
+        [Range(0, int.MaxValue, ErrorMessage = "Please enter a valid number of absences.")]
+        public int NumberOfAbsences { get; set; }
+
+        [NotMapped] // This property is not mapped to a database column
+        public ICollection<Permission> Permissions { get; set; } = new List<Permission>();
     }
 }
