@@ -6,14 +6,16 @@ namespace MVC_Attendance.Repository
     {
         List<Supervise> GetAll();
 
-        Supervise GetById(int id);
+        public Supervise GetByTrackIntakeInstructor(int trackId, int intakeId, int instructorId);
+        
 
-        void Add(Supervise supervise );
+            void Add(Supervise supervise );
 
-        void Update(int id, Supervise supervise);
+        void Update(Supervise supervise);
 
-        void Delete(int id);
+        public void Delete(int trackId, int intakeId, int instructorId);
 
-       
+
+
     }
 }

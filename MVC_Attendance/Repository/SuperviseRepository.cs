@@ -14,29 +14,38 @@ namespace MVC_Attendance.Repository
         {
             return db.Supervises.ToList();
         }
-        public Supervise GetById(int id)
+
+        public Supervise GetByTrackIntakeInstructor(int trackId, int intakeId, int instructorId)
         {
-            return db.Supervises.FirstOrDefault(supervise => supervise.InstructorId == id);
+            return db.Supervises.FirstOrDefault(supervise =>
+                supervise.TrackId == trackId &&
+                supervise.IntakeId == intakeId &&
+                supervise.InstructorId == instructorId);
         }
+
         public void Add(Supervise supervise )
         {
             db.Supervises.Add(supervise);
             db.SaveChanges();
         }
-        public void Update(int id, Supervise supervise)
+        public void Update(Supervise supervise)
         {
+           
             db.Supervises.Update(supervise);
             db.SaveChanges();
 
         }
-        public void Delete(int id)
+        public void Delete(int trackId, int intakeId, int instructorId)
         {
-            Supervise supervise  = GetById(id);
-            db.Supervises.Remove(supervise);
-            db.SaveChanges();
+            Supervise supervise = GetByTrackIntakeInstructor(trackId, intakeId, instructorId);
+            if (supervise != null)
+            {
+                db.Supervises.Remove(supervise);
+                db.SaveChanges();
+            }
         }
 
-       
-       
+
+
     }
 }

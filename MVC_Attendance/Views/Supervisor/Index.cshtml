@@ -1,0 +1,36 @@
+﻿@model List<MVC_Attendance.Models.Supervise>
+
+@{
+    ViewData["Title"] = "Supervisor Index";
+}
+
+<h2>Supervisor Index</h2>
+
+<p>
+    <a asp-action="Add">Add New Supervisor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Track</th>
+           
+            <th>InstructorId</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supervise in Model)
+        {
+            <tr>
+                <td>@supervise.Track.Name</td>
+                
+                <td>@supervise.InstructorId</td>
+                <td>
+                    <a asp-action="Edit" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Edit</a> |
+                    <a asp-action="Delete" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -5,14 +5,6 @@
       "PackagePath": "staticwebassets\\MVC_Attendance.bundle.scp.css"
     },
     {
-      "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\ExcelStudent\\UploadBulkStudent (3).xlsx",
-      "PackagePath": "staticwebassets\\ExcelStudent\\UploadBulkStudent (3).xlsx"
-    },
-    {
-      "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\ExcelStudent\\newUploadBulkStudent .xlsx",
-      "PackagePath": "staticwebassets\\ExcelStudent\\newUploadBulkStudent .xlsx"
-    },
-    {
       "Id": "D:\\ITI\\.Netcoreشرح\\project\\final\\Basic-Attendance-system\\MVC_Attendance\\wwwroot\\Sheets\\MVC-Day8.pdf",
       "PackagePath": "staticwebassets\\Sheets\\MVC-Day8.pdf"
     },
