@@ -45,9 +45,15 @@
                             <input asp-for="Address" class="form-control" />
                             <span asp-validation-for="Address" class="text-danger"></span>
                         </div>
+                        <div class="form-group disabled">
+                            <label asp-for="Role" class="control-label"></label>
+                            <input asp-for="Role" class="form-control" value="@Role.Instructor" type="hidden" />
+                            <span asp-validation-for="Role" class="text-danger"></span>
+                        </div>
+
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary">Create</button>
-                        </div>
+                        </div> 
                     </form>
                 </div>
             </div>

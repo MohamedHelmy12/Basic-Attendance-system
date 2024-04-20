@@ -19,9 +19,13 @@ namespace MVC_Attendance.Repository
             ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal();
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
             Claim userEmail = new Claim(ClaimTypes.Email, userLogin.Email);
+            Claim name = new Claim(ClaimTypes.Name, userLogin.FirstName + userLogin.LastName);
+
+
 
             Claim Role = new Claim(ClaimTypes.Role, userLogin.Role.ToString());
             claimsIdentity.AddClaim(userEmail);
+            claimsIdentity.AddClaim(name);
             claimsIdentity.AddClaim(Role);
             claimsPrincipal.AddIdentity(claimsIdentity);
             return claimsPrincipal;
