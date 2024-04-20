@@ -1,46 +1,62 @@
 ﻿@model MVC_Attendance.viewModels.SupervisorEditViewModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Supervisor";
 }
 
-<h2>Edit Supervisor</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" asp-for="Supervise.InstructorId" />
+                        <input type="hidden" asp-for="Supervise.TrackId" />
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Supervise.InstructorId" />
-    <input type="hidden" asp-for="Supervise.TrackId" />
+                        <div class="form-group">
+                            <label for="newInstructorId">Select New Instructor:</label>
+                            <select class="form-control" id="newInstructorId" name="newInstructorId">
+                                @foreach (var instructor in Model.Instructors)
+                                {
+                                    <option value="@instructor.Id">@instructor.FirstName @instructor.LastName</option>
+                                }
+                            </select>
+                        </div>
 
-    <div class="form-group">
-        <label for="newInstructorId">Select New Instructor:</label>
-        <select class="form-control" id="newInstructorId" name="newInstructorId">
-            @foreach (var instructor in Model.Instructors)
-            {
-                <option value="@instructor.Id">@instructor.FirstName @instructor.LastName</option>
-            }
-        </select>
-    </div>
+                        <div class="form-group">
+                            <label for="newTrackId">Select New Track:</label>
+                            <select class="form-control" id="newTrackId" name="newTrackId">
+                                @foreach (var track in Model.Tracks)
+                                {
+                                    <option value="@track.Id">@track.Name</option>
+                                }
+                            </select>
+                        </div>
 
-    <div class="form-group">
-        <label for="newTrackId">Select New Track:</label>
-        <select class="form-control" id="newTrackId" name="newTrackId" >
-            @foreach (var track in Model.Tracks)
-            {
-                <option value="@track.Id">@track.Name</option>
-            }
-        </select>
-    </div>
+                        <!-- Display model errors -->
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
 
-    <!-- Display model errors -->
-    @if (!ViewData.ModelState.IsValid)
-    {
-        <div class="alert alert-danger" role="alert">
-            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-            {
-                <p>@error.ErrorMessage</p>
-            }
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Update Supervisor</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    }
+    </div>
+</div>
 
-    <button type="submit" class="btn btn-primary">Update Supervisor</button>
-</form>
-<a href="@Url.Action("Index", "Supervisor")" class="btn btn-secondary">Back to List</a>
+<div class="text-center mt-3">
+    <a href="@Url.Action("Index", "Supervisor")" class="btn btn-secondary">Back to List</a>
+</div>

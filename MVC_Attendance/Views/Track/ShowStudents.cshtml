@@ -1,37 +1,47 @@
-﻿
-@{
-    ViewData["Title"] = "ShowStudents";
+﻿@{
+    ViewData["Title"] = "Show Students";
 }
 
 @model List<MVC_Attendance.Models.Student>
 
-<h2>Students in Track</h2>
-
-@if (Model != null && Model.Count > 0)
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <!-- Add more table headers for additional student properties -->
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var student in Model)
-            {
-                <tr>
-                    <td>@student.Id</td>
-                    <td>@student.FirstName+""+@student.LastName</td>
-                    <!-- Add more table cells for additional student properties -->
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>No students found in this track.</p>
-}
-
-
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body">
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <!-- Add more table headers for additional student properties -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var student in Model)
+                                    {
+                                        <tr>
+                                            <td>@student.Id</td>
+                                            <td>@student.FirstName @student.LastName</td>
+                                            <!-- Add more table cells for additional student properties -->
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-center">No students found in this track.</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
