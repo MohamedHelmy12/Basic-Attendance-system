@@ -1,5 +1,6 @@
 ﻿using MVC_Attendance.IRepository;
 using MVC_Attendance.Models;
+using System;
 
 namespace MVC_Attendance.Repository
 {
@@ -29,8 +30,19 @@ namespace MVC_Attendance.Repository
 
         public List<Schedule> GetTrackSchedule(int trackId, int intakeId)
         {
+            DateTime currentDate = DateTime.Now; 
+            DayOfWeek startOfWeek = DayOfWeek.Sunday; 
+
+            DateTime startDateOfWeek = currentDate.AddDays(-(int)currentDate.DayOfWeek);
+            while (startDateOfWeek.DayOfWeek != startOfWeek)
+            {
+                startDateOfWeek = startDateOfWeek.AddDays(-1);
+            }
+            startDateOfWeek = startDateOfWeek.AddDays(-1);
+            Console.WriteLine(startDateOfWeek.Date);
+            var currentWeekStartDate = DateOnly.FromDateTime(startDateOfWeek); 
             var trackStartDate = trackRepository.GetTrackStartDate(trackId, intakeId);
-            var schedules =  db.Schedules.Where(s => s.TrackId == trackId && trackStartDate.CompareTo(s.Date) < 0).ToList();
+            var schedules =  db.Schedules.Where(s => s.TrackId == trackId && trackStartDate.CompareTo(s.Date) < 0 && currentWeekStartDate.CompareTo(s.Date) < 0).ToList();
 
             return schedules;
         }

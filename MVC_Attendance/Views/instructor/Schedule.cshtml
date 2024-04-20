@@ -6,32 +6,36 @@
     var schedules = ViewBag.schedules as List<Schedule>;
 }
 
-<h2>Schedule List</h2>
+<h2>Current week schedule</h2>
 
 <!-- Display existing schedules -->
 @if (schedules != null)
 {
     <div>
-        <h3>Existing Schedules</h3>
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-rounded">
+            <thead class="bg-dark-red text-light">
                 <tr>
-                    <th>Start Period</th>
+                    <th>Day</th>
                     <th>Date</th>
+                    <th>Start Period</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var schedule in schedules)
                 {
                     <tr>
-                        <td>@schedule.StartPeriod</td>
+                        <td>@schedule.Date.DayOfWeek</td>
                         <td>@schedule.Date</td>
+                        <td>@schedule.StartPeriod</td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
 }
+<br />
+<hr />
+<br />
 
 <!-- Add a new schedule -->
 <div>
@@ -45,12 +49,12 @@
 
         <div class="form-group">
             <label asp-for="Date" class="control-label"></label>
-            <input type="date" asp-for="Date" class="form-control" />
+            <input type="date" asp-for="Date" class="form-control" min="@DateTime.Today.ToString("yyyy-MM-dd")" />
             <span asp-validation-for="Date" class="text-danger"></span>
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
+            <input type="submit" value="Create" class="btn bg-dark-red text-white" />
         </div>
     </form>
 </div>
