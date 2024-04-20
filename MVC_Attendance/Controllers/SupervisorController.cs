@@ -32,10 +32,11 @@ namespace MVC_Attendance.Controllers
 
             List<Track> tracks = _trackRepository.GetAll();
             List<Supervise> supervises = _superviseRepository.GetAll();
-            
-          //  ViewData["intakes"] = intakes;
+            List<Instructor> instructors = _instructorRepository.GetAllInstructors();
+            //  ViewData["intakes"] = intakes;
             ViewData["tracks"] = tracks;
-           
+            ViewData["instructors"] = instructors;
+
 
 
             return View(supervises);

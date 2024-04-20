@@ -9,7 +9,7 @@ namespace MVC_Attendance.Repository
         public Supervise GetByTrackIntakeInstructor(int trackId, int intakeId, int instructorId);
         
 
-            void Add(Supervise supervise );
+       void Add(Supervise supervise );
 
         void Update(Supervise supervise);
 

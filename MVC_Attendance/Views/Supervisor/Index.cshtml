@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Supervisor Index";
+    List<Instructor> instructors = ViewData["instructors"] as List<Instructor>;
 }
 
 <h2>Supervisor Index</h2>
@@ -15,7 +16,7 @@
         <tr>
             <th>Track</th>
            
-            <th>InstructorId</th>
+            <th>Instructor</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -24,8 +25,8 @@
         {
             <tr>
                 <td>@supervise.Track.Name</td>
-                
-                <td>@supervise.InstructorId</td>
+
+                <td>@supervise.Instructor.FirstName @supervise.Instructor.LastName</td>
                 <td>
                     <a asp-action="Edit" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Edit</a> |
                     <a asp-action="Delete" asp-route-trackId="@supervise.TrackId" asp-route-intakeId="@supervise.IntakeId" asp-route-instructorId="@supervise.InstructorId">Delete</a>

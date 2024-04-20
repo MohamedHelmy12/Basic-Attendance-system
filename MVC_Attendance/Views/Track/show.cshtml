@@ -1,6 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Show";
     List<Supervise> supervises = ViewData["Supervises"] as List<Supervise>;
+    List<Instructor> instructors = ViewData["instructors"] as List<Instructor>;
+    
 }
 
 @model List<MVC_Attendance.Models.Track>
@@ -29,7 +31,7 @@
                     <td>
                         @if (supervises != null && supervises.Count > 0)
                         {
-                            var supervisor = supervises.FirstOrDefault(s => s.TrackId == track.Id);
+                            var supervisor = supervises.FirstOrDefault(s => s.TrackId == track.Id && s.IntakeId==1);
                             if (supervisor != null)
                             {
                                 @supervisor.Instructor.FirstName @supervisor.Instructor.LastName

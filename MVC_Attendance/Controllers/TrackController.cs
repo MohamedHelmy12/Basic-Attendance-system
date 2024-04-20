@@ -11,12 +11,15 @@ namespace MVC_Attendance.Controllers
         private readonly ITrackRepository trackRepository;
         private readonly IStudentRepository studentRepository;
         private readonly ISuperviseRepository superviseRepository;
+        private readonly IInstructorRepository instructorRepository ;
 
-        public TrackController(ITrackRepository trackRepository, IStudentRepository studentRepository, ISuperviseRepository superviseRepository )
+
+        public TrackController(ITrackRepository trackRepository, IStudentRepository studentRepository, ISuperviseRepository superviseRepository, IInstructorRepository instructorRepository)
         {
             this.trackRepository = trackRepository;
             this.studentRepository = studentRepository;
             this.superviseRepository = superviseRepository;
+            this.instructorRepository = instructorRepository;
         }
         public IActionResult Index()
         {  
@@ -27,7 +30,10 @@ namespace MVC_Attendance.Controllers
         {
             List<Track> tracks = trackRepository.GetAll();
             List<Supervise> supervises = superviseRepository.GetAll();
-            ViewData["Supervises"] = supervises;
+            List<Instructor> instructors = instructorRepository.GetAllInstructors();
+
+            ViewData["supervises"] = supervises;
+            ViewData["instructors"] = instructors;
 
 
             return View(tracks);
