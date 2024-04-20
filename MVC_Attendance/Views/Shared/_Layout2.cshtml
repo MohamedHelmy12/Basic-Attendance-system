@@ -11,7 +11,25 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="~/js/admin.js" defer></script> 
+    <style>
+        .data_text {
+            margin: 20px; /* Adjust margin as needed */
+        }
+
+        .name {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding as needed */
+            border: 2px solid #333; /* Adjust border properties */
+            border-radius: 5px; /* Add rounded corners */
+            background-color: #f0f0f0; /* Add background color */
+            color: #333; /* Set text color */
+            font-size: 18px; /* Set font size */
+        }
+
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -63,7 +81,7 @@
                     </div>
                     <div class="sidebar_profile flex">
                         <div class="data_text">
-                            <span style="border:2px solid black" class="name">@User.Identity.Name</span>
+                            <span style="border:2px solid black" class="name w-25"> Admin:@User.Identity.Name</span>
                         </div>
                     </div>
             </div>
