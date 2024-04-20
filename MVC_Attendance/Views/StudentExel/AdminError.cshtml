@@ -2,17 +2,27 @@
     ViewData["Title"] = "Error";
 }
 
-<h2>@ViewData["Title"]</h2>
-
-<p>There was an error processing the Excel file. Possible reasons:</p>
-
-<ul>
-    @foreach (var reason in ViewBag.reasons)
-    {
-        <li>@reason</li>
-    }
-</ul>
-
-<a asp-controller="Home" asp-action="Index">Back to Home</a>
-
-
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body">
+                    <p class="text-center">There was an error processing the Excel file. Possible reasons:</p>
+                    <ul class="list-group">
+                        @foreach (var reason in ViewBag.reasons)
+                        {
+                            <li class="list-group-item">@reason</li>
+                        }
+                    </ul>
+                    <div class="text-center mt-3">
+                        <a asp-controller="Student" asp-action="Show" class="btn btn-primary">Back to List</a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

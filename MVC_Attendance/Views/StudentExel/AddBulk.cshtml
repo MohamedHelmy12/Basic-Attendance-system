@@ -1,19 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Add Bulk Students";
+    ViewData["Title"] = "Add Bulk of Students";
 }
 
-<h2>@ViewData["Title"]</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <form asp-controller="StudentExel" asp-action="AddBulk" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="Sheet">Select Excel File:</label>
-                    <input type="file" class="form-control-file" id="Sheet" name="Sheet">
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">@ViewData["Title"]</h1>
                 </div>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
+                <div class="card-body">
+                    <form asp-controller="StudentExel" asp-action="AddBulk" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="Sheet">Select Excel File:</label>
+                            <input type="file" class="form-control-file" id="Sheet" name="Sheet">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -4,49 +4,56 @@
     ViewData["Title"] = "Add";
 }
 
-<h2>Add Supervisor</h2>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">@ViewBag.Title Supervisor</h1>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Add" method="post">
+                        <div class="form-group">
+                            <label for="instructorId">Select Instructor:</label>
+                            <select class="form-control" id="instructorId" name="instructorId">
+                                @foreach (var instructor in Model.Instructors)
+                                {
+                                    <option value="@instructor.Id">@instructor.FirstName @instructor.LastName</option>
+                                }
+                            </select>
+                        </div>
 
-<form asp-action="Add" method="post">
-    <div class="form-group">
-        <label for="instructorId">Select Instructor:</label>
-        <select class="form-control" id="instructorId" name="instructorId">
-            @foreach (var instructor in Model.Instructors)
-            {
-                <option value="@instructor.Id">@instructor.FirstName @instructor.LastName</option>
-            }
-        </select>
-    </div>
+                        <div class="form-group">
+                            <label for="trackId">Select Track:</label>
+                            <select class="form-control" id="trackId" name="trackId">
+                                @foreach (var track in Model.Tracks)
+                                {
+                                    <option value="@track.Id">@track.Name</option>
+                                }
+                            </select>
+                        </div>
 
-    @* <div class="form-group">
-        <label for="intakeId">Select Intake:</label>
-        <select class="form-control" id="intakeId" name="intakeId">
-            @foreach (var intake in Model.Intakes)
-            {
-                <option value="@intake.Id">@intake.Name</option>
-            }
-        </select>
-    </div> *@
+                        <!-- Display model errors -->
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <p>@error.ErrorMessage</p>
+                                }
+                            </div>
+                        }
 
-    <div class="form-group">
-        <label for="trackId">Select Track:</label>
-        <select class="form-control" id="trackId" name="trackId">
-            @foreach (var track in Model.Tracks)
-            {
-                <option value="@track.Id">@track.Name</option>
-            }
-        </select>
-    </div>
-
-    <!-- Display model errors -->
-    @if (ViewData.ModelState.IsValid == false)
-    {
-        <div class="alert alert-danger" role="alert">
-            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
-            {
-                <p>@error.ErrorMessage</p>
-            }
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Add Supervisor</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    }
+    </div>
+</div>
 
-    <button type="submit" class="btn btn-primary">Add Supervisor</button>
-</form>
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
