@@ -119,6 +119,5 @@ namespace MVC_Attendance.Repository
             return u;
         }
 
-
     }
 }

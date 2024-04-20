@@ -53,5 +53,12 @@ namespace MVC_Attendance.Controllers
 
             return View(userLogin);
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Login", "Account");
+        }
+
     }
 }

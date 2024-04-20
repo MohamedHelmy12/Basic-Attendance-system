@@ -62,11 +62,12 @@
                     <div class="menu_items">
                         @{
                             var supervisorClaim = User.FindFirst("supervisor");
-                            if (supervisorClaim != null && supervisorClaim.Value == "yes")
-                            {
+                            
                                 <ul class="menu_item">
                                     <br />
                                     <hr />
+                                @if (supervisorClaim != null && supervisorClaim.Value == "yes")
+                                {
                                     <li class="item">
                                         <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
                                             <i class="bx bx-user"></i>
@@ -79,28 +80,16 @@
                                             <span>Schedule</span>
                                         </a>
                                     </li>
+                                    }
+                                    <li class="item">
+                                        <a href="@Url.Action("Logout", "Account")" class="link flex">
+                                            <i class="bx bx-user"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </li>
                                 </ul>
-                            }
+
                         }
-                        @* @if (User.Identity.supervisor == "yes")
-                        {
-                            <ul class="menu_item">
-                                <br />
-                                <hr />
-                                <li class="item">
-                                    <a href="@Url.Action("StudetsPermissions", "Instructor")" class="link flex">
-                                        <i class="bx bx-user"></i>
-                                        <span>Permissions</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="@Url.Action("Schedule", "Instructor")" class="link flex">
-                                        <i class="bx bx-user"></i>
-                                        <span>Schedule</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        } *@
                         
                     </div>
                     <div class="sidebar_profile flex">
