@@ -32,7 +32,17 @@ namespace MVC_Attendance.Controllers
                         var claimPrincipal = accountRepository.AddUserAuthentication(user);
                         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal);
                         //await Console.Out.WriteLineAsync(User.FindFirst(ClaimTypes.Role)?.Value);
-                        return RedirectToAction("Index", "Home");
+                        var role = (User.FindFirst(ClaimTypes.Role)?.Value);
+                        if (role == "Student")
+                            return RedirectToAction("Show", "Student");
+                        else if (role == "Instructor")
+                            return RedirectToAction("Index", "instructor");
+                        else if (role == "Admin")
+                            return RedirectToAction("Index", "admin");
+                        else if (role == "Employee")
+                            return RedirectToAction("Index", "Employee");
+                        else
+                            return RedirectToAction("Index", "Home");
                     }
                     else
                     {
