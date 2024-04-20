@@ -7,9 +7,15 @@
 }
 
 <div>
+    <h2 class="items-position">Permissions</h2>
+    @if(Model.Count == 0)
+    {
+        <h3 class="items-position">No permissions at the moment</h3>
+    }
+    
     @foreach (var p in Model)
     {
-        <div class="card w-100 mb-3">
+        <div class="card w-50 mb-3" style="margin-left: 150px">
             <div class="card-body">
                 <h5 class="card-title">@p.Student.FirstName @p.Student.LastName</h5>
                 <p class="card-text">@p.date </p>

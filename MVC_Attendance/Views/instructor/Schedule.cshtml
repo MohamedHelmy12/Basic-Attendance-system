@@ -2,18 +2,18 @@
 
 @{
     ViewData["Title"] = "Schedule List";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
     var schedules = ViewBag.schedules as List<Schedule>;
 }
 
-<h2>Current week schedule</h2>
+<h2 class="items-position">Current week schedule</h2>
 
 <!-- Display existing schedules -->
 @if (schedules != null)
 {
-    <div>
-        <table class="table table-bordered table-rounded">
-            <thead class="bg-dark-red text-light">
+    <div class="items-position">
+        <table class="table table-bordered table-rounded text-center ">
+            <thead class="bg-dark-red text-light ">
                 <tr>
                     <th>Day</th>
                     <th>Date</th>
@@ -34,11 +34,11 @@
     </div>
 }
 <br />
-<hr />
+<hr class="items-position" />
 <br />
 
 <!-- Add a new schedule -->
-<div>
+<div class="items-position">
     <h3>Add New Schedule</h3>
     <form method="post">
         <div class="form-group">
