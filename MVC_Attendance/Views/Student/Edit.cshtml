@@ -5,75 +5,80 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h1>Edit</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center">@ViewData["Title"]</h1>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<h4>Student</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Student.UniversityID" class="control-label"></label>
-                <input asp-for="Student.UniversityID" class="form-control" />
-                <span asp-validation-for="Student.UniversityID" class="text-danger"></span>
+                        <div class="form-group">
+                            <label asp-for="Student.UniversityID" class="control-label">University ID</label>
+                            <input asp-for="Student.UniversityID" class="form-control" />
+                            <span asp-validation-for="Student.UniversityID" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Faculty" class="control-label">Faculty</label>
+                            <input asp-for="Student.Faculty" class="form-control" />
+                            <span asp-validation-for="Student.Faculty" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Specialization" class="control-label">Specialization</label>
+                            <input asp-for="Student.Specialization" class="form-control" />
+                            <span asp-validation-for="Student.Specialization" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.GraduationYear" class="control-label">Graduation Year</label>
+                            <input asp-for="Student.GraduationYear" class="form-control" />
+                            <span asp-validation-for="Student.GraduationYear" class="text-danger"></span>
+                        </div>
+
+                        <input type="hidden" asp-for="Student.Id" />
+                        <div class="form-group">
+                            <label asp-for="Student.FirstName" class="control-label">First Name</label>
+                            <input asp-for="Student.FirstName" class="form-control" />
+                            <span asp-validation-for="Student.FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.LastName" class="control-label">Last Name</label>
+                            <input asp-for="Student.LastName" class="form-control" />
+                            <span asp-validation-for="Student.LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Email" class="control-label">Email</label>
+                            <input asp-for="Student.Email" class="form-control" />
+                            <span asp-validation-for="Student.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Password" class="control-label">Password</label>
+                            <input asp-for="Student.Password" class="form-control" />
+                            <span asp-validation-for="Student.Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Phone" class="control-label">Phone</label>
+                            <input asp-for="Student.Phone" class="form-control" />
+                            <span asp-validation-for="Student.Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Student.Address" class="control-label">Address</label>
+                            <input asp-for="Student.Address" class="form-control" />
+                            <span asp-validation-for="Student.Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Student.Faculty" class="control-label"></label>
-                <input asp-for="Student.Faculty" class="form-control" />
-                <span asp-validation-for="Student.Faculty" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.Specialization" class="control-label"></label>
-                <input asp-for="Student.Specialization" class="form-control" />
-                <span asp-validation-for="Student.Specialization" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.GraduationYear" class="control-label"></label>
-                <input asp-for="Student.GraduationYear" class="form-control" />
-                <span asp-validation-for="Student.GraduationYear" class="text-danger"></span>
-            </div>
-            
-            <input type="hidden" asp-for="Student.Id" />
-            <div class="form-group">
-                <label asp-for="Student.FirstName" class="control-label"></label>
-                <input asp-for="Student.FirstName" class="form-control" />
-                <span asp-validation-for="Student.FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.LastName" class="control-label"></label>
-                <input asp-for="Student.LastName" class="form-control" />
-                <span asp-validation-for="Student.LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.Email" class="control-label"></label>
-                <input asp-for="Student.Email" class="form-control" />
-                <span asp-validation-for="Student.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.Password" class="control-label"></label>
-                <input asp-for="Student.Password" class="form-control" />
-                <span asp-validation-for="Student.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.Phone" class="control-label"></label>
-                <input asp-for="Student.Phone" class="form-control" />
-                <span asp-validation-for="Student.Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Student.Address" class="control-label"></label>
-                <input asp-for="Student.Address" class="form-control" />
-                <span asp-validation-for="Student.Address" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Show">Back to List</a>
+<div class="text-center mt-3">
+    <a asp-action="Show" class="btn btn-secondary">Back to List</a>
 </div>
-
