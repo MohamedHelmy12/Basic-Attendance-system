@@ -1,7 +1,7 @@
 ﻿@model MVC_Attendance.Models.Attendance
 
 @{
-    Layout = null;
+    // Layout = null;
 }
 
 <!DOCTYPE html>
@@ -50,8 +50,12 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+        <a asp-action="Index"><i class="fa-solid fa-arrow-left"></i> Back to List </a>
+    @if(ViewBag.Role == "Admin")
+        {
+            <text> | </text>
+            <a asp-action="Edit" asp-route-id="@Model?.Id"><i class="fa-solid fa-edit"></i></a>
+        }
 </div>
 </body>
 </html>

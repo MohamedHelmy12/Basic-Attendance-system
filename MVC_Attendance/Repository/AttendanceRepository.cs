@@ -33,5 +33,7 @@ namespace MVC_Attendance.Repository
         {
             return db.Attendances.Where(a => a.ScheduleId == scheduleId).ToList();
         }
+
+        
     }
 }
