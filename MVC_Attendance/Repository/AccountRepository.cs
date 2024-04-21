@@ -24,20 +24,20 @@ namespace MVC_Attendance.Repository
             Claim userName = new Claim(ClaimTypes.Name, userLogin.FirstName + " " + userLogin.LastName);
             if(userLogin.Role == Models.Role.Instructor)
             {
-                Claim isSupervisor;
+                //Claim isSupervisor;
                 Claim customClaim;
                 
                 if (instructorRepository.GetSupervisionInfo(userLogin.Id) ==  null)
                 {
-                     isSupervisor = new Claim(ClaimTypes.Actor, "notSupervisor");
+                     //isSupervisor = new Claim(ClaimTypes.Actor, "notSupervisor");
                      customClaim = new Claim("supervisor", "no");
                 }
                 else
                 {
-                     isSupervisor = new Claim(ClaimTypes.Actor, "supervisor");
+                     //isSupervisor = new Claim(ClaimTypes.Actor, "supervisor");
                      customClaim = new Claim("supervisor", "yes");
                 }
-                claimsIdentity.AddClaim(isSupervisor);
+                //claimsIdentity.AddClaim(isSupervisor);
                 claimsIdentity.AddClaim(customClaim);
 
             }
